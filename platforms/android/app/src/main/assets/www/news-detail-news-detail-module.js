@@ -62,7 +62,7 @@ var NewsDetailPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>{{article.title}}</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-card (click)=\"onBack()\">\n    <p>新闻源:{{article.source.name}}</p>\n    <ion-card-title>{{article.title}}</ion-card-title>\n    <ion-img [src]=\"article.urlToImage\"></ion-img>\n    <ion-card-content>\n      <p>{{article.description}}}</p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>{{article?.title}}</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-card (click)=\"onBack()\">\n    <p>新闻源:{{article?.source.name}}</p>\n    <ion-card-title>{{article?.title}}</ion-card-title>\n    <ion-img [src]=\"article?.urlToImage\"></ion-img>\n    <ion-card-content>\n      <p>{{article?.description}}}</p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>"
 
 /***/ }),
 
@@ -112,7 +112,8 @@ var NewsDetailPage = /** @class */ (function () {
         console.log(this.newsService.currentArticle);
     };
     NewsDetailPage.prototype.onBack = function () {
-        this.router.navigate(['/news']);
+        this.router.navigate(['/']);
+        this.article = null;
     };
     NewsDetailPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

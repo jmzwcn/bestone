@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Oct 03 18:10:10 CST 2018
+#Wed Oct 03 18:54:12 CST 2018
 1073.file=/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/assets/debug/www/152.js.map
 1007.base=/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/assets/debug
 835.base=/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/assets/debug
