@@ -1,0 +1,8 @@
+{
+  "name": "bestNews",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}
