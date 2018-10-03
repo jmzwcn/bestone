@@ -1653,6 +1653,7 @@ webpackContext.id = "./node_modules/@ionic/core/dist/ionic/svg sync ./!./!./node
 var map = {
 	"./news-detail/news-detail.module": [
 		"./src/app/news-detail/news-detail.module.ts",
+		"common",
 		"news-detail-news-detail-module"
 	],
 	"./news/news.module": [
@@ -1916,7 +1917,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/jmzwcn/bestNews/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/jmzwcn/work/src/github.com/bestNews/src/main.ts */"./src/main.ts");
 
 
 /***/ })

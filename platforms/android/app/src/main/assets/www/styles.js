@@ -580,8 +580,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/jmzwcn/bestNews/src/theme/variables.scss */"./src/theme/variables.scss");
-module.exports = __webpack_require__(/*! /home/jmzwcn/bestNews/src/global.scss */"./src/global.scss");
+__webpack_require__(/*! /home/jmzwcn/work/src/github.com/bestNews/src/theme/variables.scss */"./src/theme/variables.scss");
+module.exports = __webpack_require__(/*! /home/jmzwcn/work/src/github.com/bestNews/src/global.scss */"./src/global.scss");
 
 
 /***/ })

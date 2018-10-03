@@ -786,7 +786,7 @@ var NewsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>News</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor=\"let article of data?.articles\">\n    <ion-img [src]=\"article.urlToImage\"></ion-img>\n    <ion-card-content>\n      <ion-card-title>{{article.title}}</ion-card-title>\n      <p>{{article.description}}}</p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>News</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor=\"let article of data?.articles\" (click)=\"onGotoNewsDetail(article)\">\n    <ion-img [src]=\"article.urlToImage\"></ion-img>\n    <ion-card-content>\n      <ion-card-title>{{article.title}}</ion-card-title>\n      <p>{{article.description}}}</p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>"
 
 /***/ }),
 
@@ -813,6 +813,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsPage", function() { return NewsPage; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _news_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../news.service */ "./src/app/news.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -824,9 +825,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var NewsPage = /** @class */ (function () {
-    function NewsPage(newsService) {
+    function NewsPage(newsService, router) {
         this.newsService = newsService;
+        this.router = router;
     }
     NewsPage.prototype.ngOnInit = function () {
         var _this = this;
@@ -837,13 +840,17 @@ var NewsPage = /** @class */ (function () {
             _this.data = data;
         });
     };
+    NewsPage.prototype.onGotoNewsDetail = function (article) {
+        this.newsService.currentArticle = article;
+        this.router.navigate(['/news-detail']);
+    };
     NewsPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-news',
             template: __webpack_require__(/*! ./news.page.html */ "./src/app/news/news.page.html"),
             styles: [__webpack_require__(/*! ./news.page.scss */ "./src/app/news/news.page.scss")],
         }),
-        __metadata("design:paramtypes", [_news_service__WEBPACK_IMPORTED_MODULE_1__["NewsService"]])
+        __metadata("design:paramtypes", [_news_service__WEBPACK_IMPORTED_MODULE_1__["NewsService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], NewsPage);
     return NewsPage;
 }());

@@ -62,7 +62,7 @@ var NewsDetailPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>news-detail</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>{{article.title}}</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-card (click)=\"onBack()\">\n    <p>新闻源:{{article.source.name}}</p>\n    <ion-card-title>{{article.title}}</ion-card-title>\n    <ion-img [src]=\"article.urlToImage\"></ion-img>\n    <ion-card-content>\n      <p>{{article.description}}}</p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>"
 
 /***/ }),
 
@@ -88,6 +88,8 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsDetailPage", function() { return NewsDetailPage; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _news_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../news.service */ "./src/app/news.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -98,10 +100,19 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var NewsDetailPage = /** @class */ (function () {
-    function NewsDetailPage() {
+    function NewsDetailPage(newsService, router) {
+        this.newsService = newsService;
+        this.router = router;
     }
     NewsDetailPage.prototype.ngOnInit = function () {
+        this.article = this.newsService.currentArticle;
+        console.log(this.newsService.currentArticle);
+    };
+    NewsDetailPage.prototype.onBack = function () {
+        this.router.navigate(['/news']);
     };
     NewsDetailPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -109,7 +120,7 @@ var NewsDetailPage = /** @class */ (function () {
             template: __webpack_require__(/*! ./news-detail.page.html */ "./src/app/news-detail/news-detail.page.html"),
             styles: [__webpack_require__(/*! ./news-detail.page.scss */ "./src/app/news-detail/news-detail.page.scss")],
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_news_service__WEBPACK_IMPORTED_MODULE_1__["NewsService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], NewsDetailPage);
     return NewsDetailPage;
 }());
