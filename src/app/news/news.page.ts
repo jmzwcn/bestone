@@ -13,7 +13,7 @@ export class NewsPage implements OnInit {
 
   ngOnInit() {
     this.newsService
-      .getData('top-headlines?country=us')
+      .getData('top-headlines?language=en')
       .subscribe(data => {
         console.log(data);
         this.data = data;
