@@ -8,10 +8,10 @@
   <ion-slides pager="true">
     <ion-slide *ngFor="let article of data?.articles" (click)="onGotoNewsDetail(article)">
       <!-- <ion-card>       -->
-      <ion-img [src]="article.urlToImage"></ion-img>
+      <ion-img [src]="article.urlToImage"></ion-img><p/>
       <ion-card-header>
         <ion-card-title>{{article.title}}</ion-card-title>
-      </ion-card-header>
+      </ion-card-header><p/>
       <ion-card-content>
         <p>{{article.content}}</p>
       </ion-card-content>
