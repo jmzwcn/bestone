@@ -6,7 +6,7 @@
 
 <ion-content padding>
   <ion-card (click)="onBack()">
-    <p>新闻源:{{article?.source.name}}</p>
+    <p>From: {{article?.source.name}}</p>
     <ion-card-title>{{article?.title}}</ion-card-title>
     <ion-img [src]="article?.urlToImage"></ion-img>
     <ion-card-content>
