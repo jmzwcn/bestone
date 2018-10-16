@@ -9,9 +9,6 @@ import { Router } from '@angular/router';
 })
 export class NewsPage implements OnInit {
   data: any;
-  slideOpts = {
-    effect: 'cube'
-  };
   constructor(private newsService: NewsService, private router: Router) { }
 
   ngOnInit() {

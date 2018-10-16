@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-slides pager="true" [options]="slideOpts">
+  <ion-slides pager="true">
     <ion-slide *ngFor="let article of data?.articles" (click)="onGotoNewsDetail(article)">
       <!-- <ion-card *ngFor="let article of data?.articles" (click)="onGotoNewsDetail(article)"> -->
       <ion-card-content>
@@ -13,7 +13,9 @@
           <ion-img [src]="article.urlToImage"></ion-img>
         </p>
         <ion-card-title>{{article.title}}</ion-card-title>
+        <hr/>
         <p>{{article.content}}</p>
+        <p></p><p></p><p></p>
       </ion-card-content>
       <!-- </ion-card> -->
     </ion-slide>
