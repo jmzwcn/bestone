@@ -786,7 +786,7 @@ var NewsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>News</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-slides pager=\"true\">\n    <ion-slide *ngFor=\"let article of data?.articles\" (click)=\"onGotoNewsDetail(article)\">\n      <!-- <ion-card *ngFor=\"let article of data?.articles\" (click)=\"onGotoNewsDetail(article)\"> -->\n      \n      <ion-card-content>\n          <p>\n              <ion-img [src]=\"article.urlToImage\"></ion-img>\n            </p>\n        <ion-card-title>{{article.title}}</ion-card-title>\n        <p>{{article.description}}</p>\n      </ion-card-content>\n      <!-- </ion-card> -->\n    </ion-slide>\n  </ion-slides>\n\n\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>News</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-slides pager=\"true\">\n    <ion-slide *ngFor=\"let article of data?.articles\" (click)=\"onGotoNewsDetail(article)\">\n      <ion-card>      \n      <ion-card-content>\n          <p>\n              <ion-img [src]=\"article.urlToImage\"></ion-img>\n            </p>\n        <ion-card-title>{{article.title}}</ion-card-title>\n        <p>{{article.content}}</p>\n      </ion-card-content>\n      </ion-card>\n    </ion-slide>\n  </ion-slides>\n\n\n</ion-content>\n"
 
 /***/ }),
 
@@ -834,7 +834,7 @@ var NewsPage = /** @class */ (function () {
     NewsPage.prototype.ngOnInit = function () {
         var _this = this;
         this.newsService
-            .getData('top-headlines?country=us')
+            .getData('top-headlines?language=en')
             .subscribe(function (data) {
             console.log(data);
             _this.data = data;

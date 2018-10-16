@@ -1,4 +1,4 @@
-#Wed Oct 03 18:54:12 CST 2018
-base.0=/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Tue Oct 16 20:49:13 CST 2018
+base.0=/home/jmzwcn/work/src/github.com/bestnews/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
-file.0=/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex
+file.0=/home/jmzwcn/work/src/github.com/bestnews/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex
