@@ -1,21 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Top-headlines</ion-title>
+    <ion-title>News</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-slides pager="true">
+  <ion-slides pager="true" [options]="slideOpts">
     <ion-slide *ngFor="let article of data?.articles" (click)="onGotoNewsDetail(article)">
-      <!-- <ion-card>       -->
-      <ion-img [src]="article.urlToImage"></ion-img><p/>
-      <ion-card-header>
-        <ion-card-title>{{article.title}}</ion-card-title>
-      </ion-card-header><p/>
+      <!-- <ion-card *ngFor="let article of data?.articles" (click)="onGotoNewsDetail(article)"> -->
       <ion-card-content>
+        <p>
+          <ion-img [src]="article.urlToImage"></ion-img>
+        </p>
+        <ion-card-title>{{article.title}}</ion-card-title>
         <p>{{article.content}}</p>
       </ion-card-content>
       <!-- </ion-card> -->
     </ion-slide>
   </ion-slides>
+
+
 </ion-content>
