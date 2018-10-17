@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>English News</ion-title>
+    <ion-title>Headline News</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,9 +14,14 @@
         <ion-card-title>{{article.title}}</ion-card-title>
         <hr/>
         <p>{{article.content}}</p>
+        <br/>
+        <br/>
       </ion-card-content>
-      <p></p>
-      <hr/>
     </ion-slide>
   </ion-slides>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

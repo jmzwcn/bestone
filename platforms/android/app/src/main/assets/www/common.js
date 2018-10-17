@@ -786,7 +786,7 @@ var NewsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>English News</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-slides pager=\"true\">\n    <ion-slide *ngFor=\"let article of data?.articles\" (click)=\"onGotoNewsDetail(article)\">\n      <ion-card-content>\n        <p>\n          <ion-img [src]=\"article.urlToImage\"></ion-img>\n        </p>\n        <ion-card-title>{{article.title}}</ion-card-title>\n        <hr/>\n        <p>{{article.content}}</p>\n      </ion-card-content>\n      <p></p>\n      <hr/>\n    </ion-slide>\n  </ion-slides>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>Headline News</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-slides pager=\"true\">\n    <ion-slide *ngFor=\"let article of data?.articles\" (click)=\"onGotoNewsDetail(article)\">\n      <ion-card-content>\n        <p>\n          <ion-img [src]=\"article.urlToImage\"></ion-img>\n        </p>\n        <ion-card-title>{{article.title}}</ion-card-title>\n        <hr/>\n        <p>{{article.content}}</p>\n        <br/>\n        <br/>\n      </ion-card-content>\n    </ion-slide>\n  </ion-slides>\n  <ion-fab vertical=\"bottom\" horizontal=\"end\" slot=\"fixed\">\n    <ion-fab-button>\n      <ion-icon name=\"add\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>"
 
 /***/ }),
 
