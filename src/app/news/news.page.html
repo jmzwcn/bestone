@@ -3,9 +3,7 @@
     <ion-title>Headline News</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-  <ion-fab vertical="top" horizontal="end" slot="fixed">
+<ion-fab vertical="top" horizontal="end" slot="fixed">
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
@@ -22,6 +20,8 @@
         <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
       </ion-fab-list>
   </ion-fab>
+<ion-content>
+
   <ion-slides pager="true">
     <ion-slide *ngFor="let article of data?.articles" (click)="onGotoNewsDetail(article)">
       <ion-card-content>

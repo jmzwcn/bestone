@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Oct 17 22:04:07 CST 2018
+#Wed Oct 17 22:09:41 CST 2018
 1073.file=/home/jmzwcn/work/src/github.com/bestnews/platforms/android/app/build/intermediates/assets/debug/www/svg/ios-eye-off.svg
 1007.base=/home/jmzwcn/work/src/github.com/bestnews/platforms/android/app/build/intermediates/assets/debug
 835.base=/home/jmzwcn/work/src/github.com/bestnews/platforms/android/app/build/intermediates/assets/debug
