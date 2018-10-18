@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Oct 18 21:04:23 CST 2018
+#Thu Oct 18 21:16:22 CST 2018
 1073.file=/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/assets/debug/www/svg/ios-beaker.svg
 1007.base=/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/assets/debug
 835.base=/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/assets/debug

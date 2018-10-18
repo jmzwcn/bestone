@@ -72,11 +72,11 @@
                 {
                     "source": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/res/values/strings.xml",
                     "from": {
-                        "startLines": "4,2,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "159,55,100",
-                        "endColumns": "63,44,58",
-                        "endOffsets": "218,95,154"
+                        "startLines": "-1,2,-1",
+                        "startColumns": "-1,4,-1",
+                        "startOffsets": "-1,55,-1",
+                        "endColumns": "-1,44,-1",
+                        "endOffsets": "-1,95,-1"
                     },
                     "to": {
                         "startLines": "2,3,4",
