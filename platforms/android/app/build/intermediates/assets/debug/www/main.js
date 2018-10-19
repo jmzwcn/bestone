@@ -1802,8 +1802,6 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-
-
 var AppComponent = /** @class */ (function () {
     function AppComponent(platform, splashScreen, statusBar) {
         this.platform = platform;
@@ -1824,10 +1822,6 @@ var AppComponent = /** @class */ (function () {
             });
         }); });
     };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"])(_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["IonRouterOutlet"]),
-        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"])
-    ], AppComponent.prototype, "routerOutlets", void 0);
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',

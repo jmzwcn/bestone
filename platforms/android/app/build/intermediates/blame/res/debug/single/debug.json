@@ -12,24 +12,24 @@
         "source": "/home/jmzwcn/bestNews/platforms/android/app/src/main/res/drawable-land-xhdpi/screen.png"
     },
     {
-        "merged": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-mdpi_screen.png.flat",
-        "source": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/src/main/res/drawable-land-mdpi/screen.png"
+        "merged": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xxxhdpi_screen.png.flat",
+        "source": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/src/main/res/drawable-land-xxxhdpi/screen.png"
     },
     {
         "merged": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-hdpi_screen.png.flat",
         "source": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/src/main/res/drawable-land-hdpi/screen.png"
     },
     {
-        "merged": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xxxhdpi_screen.png.flat",
-        "source": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/src/main/res/drawable-land-xxxhdpi/screen.png"
-    },
-    {
-        "merged": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/res/merged/debug/xml_config.xml.flat",
-        "source": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/src/main/res/xml/config.xml"
+        "merged": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-mdpi_screen.png.flat",
+        "source": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/src/main/res/drawable-land-mdpi/screen.png"
     },
     {
         "merged": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-ldpi_screen.png.flat",
         "source": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/src/main/res/drawable-port-ldpi/screen.png"
+    },
+    {
+        "merged": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/res/merged/debug/xml_config.xml.flat",
+        "source": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/src/main/res/xml/config.xml"
     },
     {
         "merged": "/home/jmzwcn/work/src/github.com/bestNews/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xhdpi_screen.png.flat",
