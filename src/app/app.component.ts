@@ -15,6 +15,7 @@ export class AppComponent {
     private statusBar: StatusBar
   ) {
     this.initializeApp();
+    this.backButtonEvent();
   }
 
   initializeApp() {
@@ -22,5 +23,10 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  backButtonEvent() {
+    // this.platform.exitApp();
+    navigator['app'].exitApp();
   }
 }

@@ -1773,6 +1773,7 @@ var AppComponent = /** @class */ (function () {
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
         this.initializeApp();
+        this.backButtonEvent();
     }
     AppComponent.prototype.initializeApp = function () {
         var _this = this;
@@ -1780,6 +1781,10 @@ var AppComponent = /** @class */ (function () {
             _this.statusBar.styleDefault();
             _this.splashScreen.hide();
         });
+    };
+    AppComponent.prototype.backButtonEvent = function () {
+        // this.platform.exitApp();
+        navigator['app'].exitApp();
     };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
