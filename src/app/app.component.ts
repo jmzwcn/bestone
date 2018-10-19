@@ -26,7 +26,10 @@ export class AppComponent {
   }
 
   backButtonEvent() {
+    this.platform.backButton.subscribe(async () => {
+      navigator['app'].exitApp();
+    });
     // this.platform.exitApp();
-    navigator['app'].exitApp();
+    // navigator['app'].exitApp();
   }
 }
