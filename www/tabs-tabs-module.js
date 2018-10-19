@@ -56,7 +56,7 @@ var AboutPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>About</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n    <ion-card>\n        <ion-card-content>\n            <p>TODO.</p>\n        </ion-card-content>\n    </ion-card>\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-title>About</ion-title>\n    </ion-toolbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item>\n            <ion-avatar slot=\"start\">\n                <ion-img src=\"/assets/icon/favicon.png\"></ion-img>\n            </ion-avatar>\n            <ion-label>\n                <h2>Daniel</h2>\n                <h3>I'm a super man</h3>\n                <p>Listen, I've had a pretty messed up day...</p>\n            </ion-label>\n        </ion-item>\n    </ion-list>\n</ion-content>"
 
 /***/ }),
 
