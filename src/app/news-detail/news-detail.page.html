@@ -6,8 +6,8 @@
 
 <ion-content padding>
   <ion-card (click)="onBack()">
-    <p>Time: {{article?.publishedAt}}
-      <br/> Source: {{article?.source.name}}</p>
+    <p>Source: {{article?.source.name}}
+      <br/>Time: {{article?.publishedAt}}</p>
     <ion-img [src]="article?.urlToImage"></ion-img>
     <ion-card-content>
       <p>{{article?.content}}</p>
