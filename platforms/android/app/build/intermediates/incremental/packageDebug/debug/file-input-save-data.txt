@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Oct 21 17:08:41 CST 2018
+#Sun Oct 21 20:06:16 CST 2018
 1073.file=/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_/res/drawable-xhdpi-v4/launcher_icon.png
 1090.base=/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/assets/debug
 1007.base=/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/assets/debug

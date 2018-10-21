@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { NewsPage } from './news/news.page';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
     SplashScreen,
     BarcodeScanner,
     Geolocation,
+    NewsPage,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

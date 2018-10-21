@@ -4,6 +4,8 @@ import { Platform, AlertController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { NewsPage } from './news/news.page';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -14,6 +16,7 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private alertCtrl: AlertController,
+    private newsPage: NewsPage,
   ) {
     this.initializeApp();
   }
@@ -46,5 +49,9 @@ export class AppComponent {
       });
       await alert.present();
     });
+  }
+
+  refresh(category) {
+    this.newsPage.refresh(category);
   }
 }

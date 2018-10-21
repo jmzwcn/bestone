@@ -14,15 +14,20 @@ export class NewsPage implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    this.newsService
-      .getData('top-headlines?language=en')
-      .subscribe(data => {
-        console.log(data);
-        this.data = data;
-      });
+    this.refresh('general');
   }
 
-  onGotoNewsDetail(article) {
+  refresh(category) {
+    this.newsService
+      .getData('top-headlines?country=us&category=' + category)
+      .subscribe(data => {
+        // console.log(data);
+        this.data = data;
+      });
+    // alert(category);
+  }
+
+  gotoNewsDetail(article) {
     this.newsService.currentArticle = article;
     this.router.navigate(['/news-detail']);
   }
