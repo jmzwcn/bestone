@@ -1821,8 +1821,8 @@ var AppComponent = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.alertCtrl.create({
-                            header: 'Confirm!',
-                            message: '确定退出<strong>BestOne</strong>?',
+                            header: '',
+                            message: '您确定要退出<strong>App</strong>吗?',
                             buttons: [
                                 {
                                     text: '取消',

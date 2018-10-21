@@ -25,8 +25,8 @@ export class AppComponent {
     });
     this.platform.backButton.subscribe(async () => {
       const alert = await this.alertCtrl.create({
-        header: 'Confirm!',
-        message: '确定退出<strong>BestOne</strong>?',
+        header: '',
+        message: '您确定要退出<strong>App</strong>吗?',
         buttons: [
           {
             text: '取消',
