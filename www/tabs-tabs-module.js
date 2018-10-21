@@ -56,7 +56,7 @@ var AboutPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-title>About</ion-title>\n    </ion-toolbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item>\n            <ion-avatar slot=\"start\">\n                <ion-img src=\"/assets/icon/favicon.png\"></ion-img>\n            </ion-avatar>\n            <ion-label>\n                <h2>Daniel</h2>\n                <h3>I'm a super man</h3>\n                <p>Listen, I've had a pretty messed up day...</p>\n            </ion-label>\n        </ion-item>\n    </ion-list>\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-title>About</ion-title>\n    </ion-toolbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item>\n            <ion-icon name=\"logo-ionic\" slot=\"start\"></ion-icon>\n            <ion-label>\n                <h2>Daniel</h2>\n                <h3>I'm a super man</h3>\n                <p>Listen, I've had a pretty messed up day...</p>\n            </ion-label>\n        </ion-item>\n    </ion-list>\n</ion-content>"
 
 /***/ }),
 
@@ -162,7 +162,7 @@ var ContactPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on 微信</ion-list-header>\n    <ion-item (click)=\"scanQR()\">\n      <ion-icon name=\"logo-ionic\" slot=\"start\"></ion-icon>\n      二维码\n    </ion-item>\n  </ion-list>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on 微信</ion-list-header>\n    <ion-item>\n      <ion-button size=\"default\" (click)=\"scanQR()\">二维码</ion-button>\n    </ion-item>   \n  </ion-list>\n</ion-content>"
 
 /***/ }),
 
@@ -206,9 +206,8 @@ var ContactPage = /** @class */ (function () {
     }
     ContactPage.prototype.scanQR = function () {
         var options = {
-            showFlipCameraButton: true,
+            //  showFlipCameraButton: true, // iOS and Android
             showTorchButton: true,
-            torchOn: true,
         };
         this.barcodeScanner.scan(options).then(function (barcodeData) {
             console.log('Barcode data', barcodeData);

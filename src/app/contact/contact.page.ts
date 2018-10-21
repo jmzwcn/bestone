@@ -11,9 +11,8 @@ export class ContactPage {
 
   scanQR() {
     const options: BarcodeScannerOptions = {
-      showFlipCameraButton: true, // iOS and Android
+      //  showFlipCameraButton: true, // iOS and Android
       showTorchButton: true, // iOS and Android
-      torchOn: true, // Android, launch with the torch switched on (if available)
     };
     this.barcodeScanner.scan(options).then(barcodeData => {
       console.log('Barcode data', barcodeData);
