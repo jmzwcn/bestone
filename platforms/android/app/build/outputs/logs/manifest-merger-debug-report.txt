@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
-INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
-INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
-INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
+ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
 MERGED from [:barcodescanner-release-2.1.5:] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/1cec60ae8619f3f18fe29fc7526a06a7/AndroidManifest.xml:2:1-14:12
 MERGED from [com.android.support:support-v4:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/f7703e9d3930b7cdb6c0ed797030b3af/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-media-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/44f5f8d28dbad0e5bae0d95271b6b188/AndroidManifest.xml:17:1-22:12
@@ -16,9 +16,9 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jmzwcn/.gradle/caches/t
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/e1918b5f09741330ef8898c174343f05/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/89f2f43d8f93d1b871361227d59f23e2/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/593dd4e8aa245d943f2dd452f221a4e7/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
-INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
-INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
 	package
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:98-124
 		INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml
@@ -155,3 +155,15 @@ ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/ma
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:18:58-81
 	android:name
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:18:19-57
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:19:5-81
+	android:name
+		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:19:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:20:22-76
+uses-feature#android.hardware.location.gps
+ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:21:19-63

@@ -129,6 +129,10 @@ MIT
 MIT
 MIT
 
+@ionic-native/geolocation@5.0.0-beta.21
+MIT
+MIT
+
 @ionic-native/splash-screen@5.0.0-beta.21
 MIT
 MIT

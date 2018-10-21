@@ -162,7 +162,7 @@ var ContactPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on 微信</ion-list-header>\n    <ion-item>\n      <ion-button size=\"default\" (click)=\"scanQR()\">二维码</ion-button>\n    </ion-item>   \n  </ion-list>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on 微信</ion-list-header>\n    <ion-item>\n      <ion-button size=\"default\" (click)=\"getLocation()\">当前位置</ion-button>\n    </ion-item>   \n  </ion-list>\n</ion-content>"
 
 /***/ }),
 
@@ -188,7 +188,7 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactPage", function() { return ContactPage; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic-native/barcode-scanner/ngx */ "./node_modules/@ionic-native/barcode-scanner/ngx/index.js");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -201,20 +201,23 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var ContactPage = /** @class */ (function () {
-    function ContactPage(barcodeScanner) {
-        this.barcodeScanner = barcodeScanner;
+    function ContactPage(geolocation) {
+        this.geolocation = geolocation;
     }
-    ContactPage.prototype.scanQR = function () {
-        var options = {
-            //  showFlipCameraButton: true, // iOS and Android
-            showTorchButton: true,
-        };
-        this.barcodeScanner.scan(options).then(function (barcodeData) {
-            console.log('Barcode data', barcodeData);
-            alert(barcodeData.text);
-        }).catch(function (err) {
-            console.log('Error', err);
+    ContactPage.prototype.getLocation = function () {
+        this.geolocation.getCurrentPosition().then(function (resp) {
+            alert(resp.coords.latitude + resp.coords.longitude);
+            // resp.coords.latitude
+            // resp.coords.longitude
+        }).catch(function (error) {
+            console.log('Error getting location', error);
         });
+        //  let watch = this.geolocation.watchPosition();
+        //  watch.subscribe((data) => {
+        //   // data can be a set of coordinates, or an error (if an error occurred).
+        //   // data.coords.latitude
+        //   // data.coords.longitude
+        //  });
     };
     ContactPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -222,7 +225,7 @@ var ContactPage = /** @class */ (function () {
             template: __webpack_require__(/*! ./contact.page.html */ "./src/app/contact/contact.page.html"),
             styles: [__webpack_require__(/*! ./contact.page.scss */ "./src/app/contact/contact.page.scss")]
         }),
-        __metadata("design:paramtypes", [_ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_1__["BarcodeScanner"]])
+        __metadata("design:paramtypes", [_ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_1__["Geolocation"]])
     ], ContactPage);
     return ContactPage;
 }());

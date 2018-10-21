@@ -32,20 +32,20 @@
         "source": "/home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/1cec60ae8619f3f18fe29fc7526a06a7/res/drawable-xhdpi/launcher_icon.png"
     },
     {
-        "merged": "/home/jmzwcn/work/src/github.com/bestnews/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-ldpi_screen.png.flat",
-        "source": "/home/jmzwcn/work/src/github.com/bestnews/platforms/android/app/src/main/res/drawable-land-ldpi/screen.png"
-    },
-    {
-        "merged": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xxxhdpi_screen.png.flat",
-        "source": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/res/drawable-land-xxxhdpi/screen.png"
+        "merged": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/res/merged/debug/menu_capture.xml.flat",
+        "source": "/home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/1cec60ae8619f3f18fe29fc7526a06a7/res/menu/capture.xml"
     },
     {
         "merged": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
         "source": "/home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/f227555169a0cee0c545005d465dd206/res/layout-v16/notification_template_custom_big.xml"
     },
     {
-        "merged": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/res/merged/debug/menu_capture.xml.flat",
-        "source": "/home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/1cec60ae8619f3f18fe29fc7526a06a7/res/menu/capture.xml"
+        "merged": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xxxhdpi_screen.png.flat",
+        "source": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/res/drawable-land-xxxhdpi/screen.png"
+    },
+    {
+        "merged": "/home/jmzwcn/work/src/github.com/bestnews/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-ldpi_screen.png.flat",
+        "source": "/home/jmzwcn/work/src/github.com/bestnews/platforms/android/app/src/main/res/drawable-land-ldpi/screen.png"
     },
     {
         "merged": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/res/merged/debug/layout-land_encode.xml.flat",
@@ -56,12 +56,12 @@
         "source": "/home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/f227555169a0cee0c545005d465dd206/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/res/merged/debug/drawable_toggle_torch.png.flat",
-        "source": "/home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/1cec60ae8619f3f18fe29fc7526a06a7/res/drawable/toggle_torch.png"
-    },
-    {
         "merged": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/res/merged/debug/layout_bookmark_picker_list_item.xml.flat",
         "source": "/home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/1cec60ae8619f3f18fe29fc7526a06a7/res/layout/bookmark_picker_list_item.xml"
+    },
+    {
+        "merged": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/res/merged/debug/drawable_toggle_torch.png.flat",
+        "source": "/home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/1cec60ae8619f3f18fe29fc7526a06a7/res/drawable/toggle_torch.png"
     },
     {
         "merged": "/home/jmzwcn/work/src/github.com/bestnews/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-ldpi_screen.png.flat",
