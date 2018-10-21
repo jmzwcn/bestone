@@ -1802,11 +1802,13 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+// import { AlertController } from 'ionic-angular';
 var AppComponent = /** @class */ (function () {
-    function AppComponent(platform, splashScreen, statusBar) {
+    function AppComponent(platform, splashScreen, statusBar, alertCtrl) {
         this.platform = platform;
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
+        this.alertCtrl = alertCtrl;
         this.initializeApp();
     }
     AppComponent.prototype.initializeApp = function () {
@@ -1817,7 +1819,26 @@ var AppComponent = /** @class */ (function () {
         });
         this.platform.backButton.subscribe(function () { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                navigator['app'].exitApp();
+                this.alertCtrl.create({
+                    message: 'Do you want Exit?',
+                    buttons: [
+                        {
+                            text: 'Cancel',
+                            role: 'cancel',
+                            handler: function () {
+                                console.log('Cancel clicked');
+                            }
+                        },
+                        {
+                            text: 'Yes',
+                            handler: function () {
+                                console.log('Yes clicked');
+                                //  this.platform.exitApp();
+                                navigator['app'].exitApp();
+                            }
+                        }
+                    ]
+                });
                 return [2 /*return*/];
             });
         }); });
@@ -1829,7 +1850,8 @@ var AppComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_2__["SplashScreen"],
-            _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_3__["StatusBar"]])
+            _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_3__["StatusBar"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["AlertController"]])
     ], AppComponent);
     return AppComponent;
 }());
