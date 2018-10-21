@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-scanner/ngx';
 
 @Component({
   selector: 'app-contact',
@@ -9,10 +9,15 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 export class ContactPage {
   constructor(private barcodeScanner: BarcodeScanner) { }
 
-  scan() {
-    this.barcodeScanner.scan().then(barcodeData => {
+  scanQR() {
+    const options: BarcodeScannerOptions = {
+      showFlipCameraButton: true, // iOS and Android
+      showTorchButton: true, // iOS and Android
+      torchOn: true, // Android, launch with the torch switched on (if available)
+    };
+    this.barcodeScanner.scan(options).then(barcodeData => {
       console.log('Barcode data', barcodeData);
-      alert(barcodeData);
+      alert(barcodeData.text);
     }).catch(err => {
       console.log('Error', err);
     });

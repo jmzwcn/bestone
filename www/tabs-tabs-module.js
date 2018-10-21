@@ -162,7 +162,7 @@ var ContactPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on 微信</ion-list-header>\n    <ion-item>\n      <ion-icon name=\"logo-ionic\" slot=\"start\"></ion-icon>\n      Daniel Zhang\n    </ion-item>\n    <ion-item (click)=\"scan()\">\n      <ion-icon name=\"logo-ionic\" slot=\"start\"></ion-icon>\n      二维码\n    </ion-item>\n  </ion-list>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on 微信</ion-list-header>\n    <ion-item (click)=\"scanQR()\">\n      <ion-icon name=\"logo-ionic\" slot=\"start\"></ion-icon>\n      二维码\n    </ion-item>\n  </ion-list>\n</ion-content>"
 
 /***/ }),
 
@@ -204,10 +204,15 @@ var ContactPage = /** @class */ (function () {
     function ContactPage(barcodeScanner) {
         this.barcodeScanner = barcodeScanner;
     }
-    ContactPage.prototype.scan = function () {
-        this.barcodeScanner.scan().then(function (barcodeData) {
+    ContactPage.prototype.scanQR = function () {
+        var options = {
+            showFlipCameraButton: true,
+            showTorchButton: true,
+            torchOn: true,
+        };
+        this.barcodeScanner.scan(options).then(function (barcodeData) {
             console.log('Barcode data', barcodeData);
-            alert(barcodeData);
+            alert(barcodeData.text);
         }).catch(function (err) {
             console.log('Error', err);
         });
