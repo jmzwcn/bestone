@@ -26,17 +26,17 @@ export class AppComponent {
     this.platform.backButton.subscribe(async () => {
       const alert = await this.alertCtrl.create({
         header: 'Confirm!',
-        message: 'Message <strong>text</strong>!!!',
+        message: '确定退出<strong>BestOne</strong>?',
         buttons: [
           {
-            text: 'Cancel',
+            text: '取消',
             role: 'cancel',
             cssClass: 'secondary',
             handler: (blah) => {
               console.log('Confirm Cancel: blah');
             }
           }, {
-            text: 'Okay',
+            text: '确定',
             handler: () => {
               console.log('Confirm Okay');
               navigator['app'].exitApp();

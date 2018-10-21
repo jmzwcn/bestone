@@ -1822,17 +1822,17 @@ var AppComponent = /** @class */ (function () {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.alertCtrl.create({
                             header: 'Confirm!',
-                            message: 'Message <strong>text</strong>!!!',
+                            message: '确定退出<strong>BestOne</strong>?',
                             buttons: [
                                 {
-                                    text: 'Cancel',
+                                    text: '取消',
                                     role: 'cancel',
                                     cssClass: 'secondary',
                                     handler: function (blah) {
                                         console.log('Confirm Cancel: blah');
                                     }
                                 }, {
-                                    text: 'Okay',
+                                    text: '确定',
                                     handler: function () {
                                         console.log('Confirm Okay');
                                         navigator['app'].exitApp();
