@@ -1802,7 +1802,6 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-// import { AlertController } from 'ionic-angular';
 var AppComponent = /** @class */ (function () {
     function AppComponent(platform, splashScreen, statusBar, alertCtrl) {
         this.platform = platform;
@@ -1818,28 +1817,36 @@ var AppComponent = /** @class */ (function () {
             _this.splashScreen.hide();
         });
         this.platform.backButton.subscribe(function () { return __awaiter(_this, void 0, void 0, function () {
+            var alert;
             return __generator(this, function (_a) {
-                this.alertCtrl.create({
-                    message: 'Do you want Exit?',
-                    buttons: [
-                        {
-                            text: 'Cancel',
-                            role: 'cancel',
-                            handler: function () {
-                                console.log('Cancel clicked');
-                            }
-                        },
-                        {
-                            text: 'Yes',
-                            handler: function () {
-                                console.log('Yes clicked');
-                                //  this.platform.exitApp();
-                                navigator['app'].exitApp();
-                            }
-                        }
-                    ]
-                });
-                return [2 /*return*/];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.alertCtrl.create({
+                            header: 'Confirm!',
+                            message: 'Message <strong>text</strong>!!!',
+                            buttons: [
+                                {
+                                    text: 'Cancel',
+                                    role: 'cancel',
+                                    cssClass: 'secondary',
+                                    handler: function (blah) {
+                                        console.log('Confirm Cancel: blah');
+                                    }
+                                }, {
+                                    text: 'Okay',
+                                    handler: function () {
+                                        console.log('Confirm Okay');
+                                        navigator['app'].exitApp();
+                                    }
+                                }
+                            ]
+                        })];
+                    case 1:
+                        alert = _a.sent();
+                        return [4 /*yield*/, alert.present()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         }); });
     };

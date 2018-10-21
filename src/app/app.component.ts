@@ -24,26 +24,27 @@ export class AppComponent {
       this.splashScreen.hide();
     });
     this.platform.backButton.subscribe(async () => {
-      this.alertCtrl.create({
-        message: 'Do you want Exit?',
+      const alert = await this.alertCtrl.create({
+        header: 'Confirm!',
+        message: 'Message <strong>text</strong>!!!',
         buttons: [
           {
             text: 'Cancel',
             role: 'cancel',
-            handler: () => {
-              console.log('Cancel clicked');
+            cssClass: 'secondary',
+            handler: (blah) => {
+              console.log('Confirm Cancel: blah');
             }
-          },
-          {
-            text: 'Yes',
+          }, {
+            text: 'Okay',
             handler: () => {
-              console.log('Yes clicked');
-              //  this.platform.exitApp();
+              console.log('Confirm Okay');
               navigator['app'].exitApp();
             }
           }
         ]
       });
+      await alert.present();
     });
   }
 }
