@@ -8,24 +8,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./news.page.scss'],
 })
 export class NewsPage implements OnInit {
+  category = 'general';
   data: any;
   constructor(
     private newsService: NewsService,
     private router: Router) { }
 
   ngOnInit() {
-    this.refresh('general');
+    this.refresh();
   }
 
-  refresh(category) {
+  refresh() {
     this.newsService
-      .getData('top-headlines?country=us&category=' + category)
+      .getData('top-headlines?country=us&category=' + this.category)
       .subscribe(data => {
-        // console.log(data);
         this.data = data;
       });
-    this.router.navigateByUrl('/news', { skipLocationChange: true }).then(() => this.router.navigate(['/news']));
-    // alert(category);
+    // this.router.navigate(['/']);
   }
 
   gotoNewsDetail(article) {

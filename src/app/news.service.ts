@@ -9,7 +9,9 @@ const API_KEY = environment.apiKey;
   providedIn: 'root'
 })
 export class NewsService {
+  //  category: any;
   currentArticle: any;
+
   constructor(private http: HttpClient) { }
 
   getData(url) {

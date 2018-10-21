@@ -4,7 +4,7 @@ import { Platform, AlertController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
-import { NewsPage } from './news/news.page';
+// import { NewsPage } from './news/news.page';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,7 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private alertCtrl: AlertController,
-    private newsPage: NewsPage,
+    //  private newsPage: NewsPage,
   ) {
     this.initializeApp();
   }
@@ -52,6 +52,8 @@ export class AppComponent {
   }
 
   refresh(category) {
-    this.newsPage.refresh(category);
+    // this.newsPage.category = category;
+    // this.newsPage.refresh();
+    // this.router.navigateByUrl('/news', { skipLocationChange: true }).then(() => this.router.navigate(['/news']));
   }
 }

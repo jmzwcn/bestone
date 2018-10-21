@@ -109,7 +109,6 @@ var NewsDetailPage = /** @class */ (function () {
     }
     NewsDetailPage.prototype.ngOnInit = function () {
         this.article = this.newsService.currentArticle;
-        console.log(this.newsService.currentArticle);
     };
     NewsDetailPage.prototype.onBack = function () {
         this.router.navigate(['/']);

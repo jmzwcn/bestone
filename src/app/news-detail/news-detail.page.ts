@@ -13,7 +13,6 @@ export class NewsDetailPage implements OnInit {
 
   ngOnInit() {
     this.article = this.newsService.currentArticle;
-    console.log(this.newsService.currentArticle);
   }
 
   onBack() {
