@@ -2049,6 +2049,7 @@ var NewsPage = /** @class */ (function () {
             // console.log(data);
             _this.data = data;
         });
+        this.router.navigateByUrl('/news', { skipLocationChange: true }).then(function () { return _this.router.navigate(['/news']); });
         // alert(category);
     };
     NewsPage.prototype.gotoNewsDetail = function (article) {

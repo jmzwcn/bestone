@@ -24,6 +24,7 @@ export class NewsPage implements OnInit {
         // console.log(data);
         this.data = data;
       });
+    this.router.navigateByUrl('/news', { skipLocationChange: true }).then(() => this.router.navigate(['/news']));
     // alert(category);
   }
 
