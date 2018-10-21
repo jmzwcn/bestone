@@ -786,7 +786,7 @@ var NewsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Headline News</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-slides pager=\"true\">\n    <ion-slide *ngFor=\"let article of data?.articles\" (click)=\"onGotoNewsDetail(article)\">\n      <ion-card-content>\n        <p>\n          <ion-img [src]=\"article.urlToImage\"></ion-img>\n        </p>\n        <ion-card-title>{{article.title}}</ion-card-title>\n        <p>{{article.content}}</p>\n        <br/>\n      </ion-card-content>\n    </ion-slide>\n  </ion-slides>\n</ion-content>\n<ion-fab vertical=\"bottom\" horizontal=\"end\" slot=\"fixed\">\n  <ion-fab-button (click)=\"scanQR()\">\n    <ion-icon name=\"add\"></ion-icon>\n  </ion-fab-button>\n</ion-fab>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Headline News</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-slides pager=\"true\">\n    <ion-slide *ngFor=\"let article of data?.articles\" (click)=\"onGotoNewsDetail(article)\">\n      <ion-card-content>\n        <p>\n          <ion-img [src]=\"article.urlToImage\"></ion-img>\n        </p>\n        <ion-card-title>{{article.title}}</ion-card-title>\n        <p>{{article.content}}</p>\n        <br/>\n      </ion-card-content>\n    </ion-slide>\n  </ion-slides>\n</ion-content>\n<ion-fab vertical=\"bottom\" horizontal=\"end\" slot=\"fixed\">\n  <ion-fab-button>\n    <ion-icon name=\"share\"></ion-icon>\n  </ion-fab-button>\n</ion-fab>"
 
 /***/ }),
 
@@ -814,7 +814,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _news_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../news.service */ "./src/app/news.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/barcode-scanner/ngx */ "./node_modules/@ionic-native/barcode-scanner/ngx/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -827,12 +826,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var NewsPage = /** @class */ (function () {
-    function NewsPage(newsService, router, barcodeScanner) {
+    function NewsPage(newsService, router) {
         this.newsService = newsService;
         this.router = router;
-        this.barcodeScanner = barcodeScanner;
     }
     NewsPage.prototype.ngOnInit = function () {
         var _this = this;
@@ -847,17 +844,6 @@ var NewsPage = /** @class */ (function () {
         this.newsService.currentArticle = article;
         this.router.navigate(['/news-detail']);
     };
-    NewsPage.prototype.scanQR = function () {
-        var options = {
-            showTorchButton: true,
-        };
-        this.barcodeScanner.scan(options).then(function (barcodeData) {
-            // console.log('Barcode data', barcodeData);
-            alert(barcodeData.text);
-        }).catch(function (err) {
-            console.log('Error', err);
-        });
-    };
     NewsPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-news',
@@ -865,8 +851,7 @@ var NewsPage = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./news.page.scss */ "./src/app/news/news.page.scss")],
         }),
         __metadata("design:paramtypes", [_news_service__WEBPACK_IMPORTED_MODULE_1__["NewsService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-            _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_3__["BarcodeScanner"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], NewsPage);
     return NewsPage;
 }());
