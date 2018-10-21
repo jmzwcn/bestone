@@ -162,7 +162,7 @@ var ContactPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on 微信</ion-list-header>\n    <ion-item>\n      <ion-icon name=\"logo-ionic\" slot=\"start\"></ion-icon>\n      Daniel Zhang\n    </ion-item>\n  </ion-list>\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on 微信</ion-list-header>\n    <ion-item>\n      <ion-icon name=\"logo-ionic\" slot=\"start\"></ion-icon>\n      Daniel Zhang\n    </ion-item>\n    <ion-item (click)=\"scan()\">\n      <ion-icon name=\"logo-ionic\" slot=\"start\"></ion-icon>\n      二维码\n    </ion-item>\n  </ion-list>\n</ion-content>"
 
 /***/ }),
 
@@ -188,22 +188,37 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactPage", function() { return ContactPage; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic-native/barcode-scanner/ngx */ "./node_modules/@ionic-native/barcode-scanner/ngx/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var ContactPage = /** @class */ (function () {
-    function ContactPage() {
+    function ContactPage(barcodeScanner) {
+        this.barcodeScanner = barcodeScanner;
     }
+    ContactPage.prototype.scan = function () {
+        this.barcodeScanner.scan().then(function (barcodeData) {
+            console.log('Barcode data', barcodeData);
+            alert(barcodeData);
+        }).catch(function (err) {
+            console.log('Error', err);
+        });
+    };
     ContactPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-contact',
             template: __webpack_require__(/*! ./contact.page.html */ "./src/app/contact/contact.page.html"),
             styles: [__webpack_require__(/*! ./contact.page.scss */ "./src/app/contact/contact.page.scss")]
-        })
+        }),
+        __metadata("design:paramtypes", [_ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_1__["BarcodeScanner"]])
     ], ContactPage);
     return ContactPage;
 }());

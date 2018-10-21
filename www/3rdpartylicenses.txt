@@ -121,6 +121,10 @@ MIT
 MIT
 MIT
 
+@ionic-native/barcode-scanner@5.0.0-beta.21
+MIT
+MIT
+
 @ionic-native/core@5.0.0-beta.21
 MIT
 MIT
