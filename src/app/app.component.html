@@ -7,13 +7,50 @@
         </ion-toolbar>
       </ion-header>
       <ion-content>
-        <ion-button color="primary" expand="full" (click)="refresh('general')">general</ion-button>
-        <ion-button color="secondary" expand="full" (click)="refresh('business')">business</ion-button>
-        <ion-button color="tertiary" expand="full" (click)="refresh('entertainment')">entertainment</ion-button>
-        <ion-button color="success" expand="full" (click)="refresh('health')">health</ion-button>
-        <ion-button color="warning" expand="full" (click)="refresh('science')">science</ion-button>
-        <ion-button color="danger" expand="full" (click)="refresh('sports')">sports</ion-button>
-        <ion-button color="light" expand="full" (click)="refresh('technology')">technology</ion-button>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/news','health']">
+              <ion-icon slot="start" name="home"></ion-icon>
+              <ion-label>General</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/news','health']">
+              <ion-icon slot="start" name="at"></ion-icon>
+              <ion-label>Business</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/news','health']">
+              <ion-icon slot="start" name="apps"></ion-icon>
+              <ion-label>Entertainment</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/news','health']">
+              <ion-icon slot="start" name="medkit"></ion-icon>
+              <ion-label>Health</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/news','health']">
+              <ion-icon slot="start" name="school"></ion-icon>
+              <ion-label>Science</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/news','health']">
+              <ion-icon slot="start" name="football"></ion-icon>
+              <ion-label>Sports</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle>
+            <ion-item routerDirection="root" [routerLink]="['/news','health']">
+              <ion-icon slot="start" name="cloudy"></ion-icon>
+              <ion-label>Technology</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
       </ion-content>
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>
