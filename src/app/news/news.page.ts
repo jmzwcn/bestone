@@ -19,14 +19,15 @@ export class NewsPage implements OnInit {
   }
 
   refresh() {
-    let category = this.activatedRoute.snapshot.params.category;
-    if (!category) {
-      category = 'general';
+    const category = this.activatedRoute.snapshot.params.category;
+    if (category) {
+      this.newsService.category = category;
     }
     this.newsService
-      .getData('top-headlines?country=us&category=' + category)
+      .getData('top-headlines?country=us&category=' + this.newsService.category)
       .subscribe(data => {
         this.data = data;
+        this.data.articles.filter(element => element.content !== '');
       });
   }
 

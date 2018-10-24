@@ -707,6 +707,7 @@ var API_KEY = _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environmen
 var NewsService = /** @class */ (function () {
     function NewsService(http) {
         this.http = http;
+        this.category = 'general';
     }
     NewsService.prototype.getData = function (url) {
         return this.http.get(API_URL + "/" + url + "&apiKey=" + API_KEY);
@@ -838,13 +839,14 @@ var NewsPage = /** @class */ (function () {
     NewsPage.prototype.refresh = function () {
         var _this = this;
         var category = this.activatedRoute.snapshot.params.category;
-        if (!category) {
-            category = 'general';
+        if (category) {
+            this.newsService.category = category;
         }
         this.newsService
-            .getData('top-headlines?country=us&category=' + category)
+            .getData('top-headlines?country=us&category=' + this.newsService.category)
             .subscribe(function (data) {
             _this.data = data;
+            _this.data.articles.filter(function (element) { return element.content !== ''; });
         });
     };
     NewsPage.prototype.gotoNewsDetail = function (article) {
