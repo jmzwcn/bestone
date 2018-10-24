@@ -1736,7 +1736,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu>\n      <ion-header>\n        <ion-toolbar>\n          <ion-title>Menu</ion-title>\n        </ion-toolbar>\n      </ion-header>\n      <ion-content>\n        <ion-list>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','health']\">\n              <ion-icon slot=\"start\" name=\"home\"></ion-icon>\n              <ion-label>General</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','health']\">\n              <ion-icon slot=\"start\" name=\"at\"></ion-icon>\n              <ion-label>Business</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','health']\">\n              <ion-icon slot=\"start\" name=\"apps\"></ion-icon>\n              <ion-label>Entertainment</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','health']\">\n              <ion-icon slot=\"start\" name=\"medkit\"></ion-icon>\n              <ion-label>Health</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','health']\">\n              <ion-icon slot=\"start\" name=\"school\"></ion-icon>\n              <ion-label>Science</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','health']\">\n              <ion-icon slot=\"start\" name=\"football\"></ion-icon>\n              <ion-label>Sports</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle>\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','health']\">\n              <ion-icon slot=\"start\" name=\"cloudy\"></ion-icon>\n              <ion-label>Technology</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>"
+module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu>\n      <ion-header>\n        <ion-toolbar>\n          <ion-title>Menu</ion-title>\n        </ion-toolbar>\n      </ion-header>\n      <ion-content>\n        <ion-list>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','general']\">\n              <ion-icon slot=\"start\" name=\"home\"></ion-icon>\n              <ion-label>General</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','business']\">\n              <ion-icon slot=\"start\" name=\"at\"></ion-icon>\n              <ion-label>Business</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','entertainment']\">\n              <ion-icon slot=\"start\" name=\"apps\"></ion-icon>\n              <ion-label>Entertainment</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','health']\">\n              <ion-icon slot=\"start\" name=\"medkit\"></ion-icon>\n              <ion-label>Health</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','science']\">\n              <ion-icon slot=\"start\" name=\"school\"></ion-icon>\n              <ion-label>Science</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','sports']\">\n              <ion-icon slot=\"start\" name=\"football\"></ion-icon>\n              <ion-label>Sports</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle>\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','technology']\">\n              <ion-icon slot=\"start\" name=\"cloudy\"></ion-icon>\n              <ion-label>Technology</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>"
 
 /***/ }),
 
@@ -1802,7 +1802,6 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-// import { NewsPage } from './news/news.page';
 var AppComponent = /** @class */ (function () {
     function AppComponent(platform, splashScreen, statusBar, alertCtrl) {
         this.platform = platform;
@@ -1850,11 +1849,6 @@ var AppComponent = /** @class */ (function () {
                 }
             });
         }); });
-    };
-    AppComponent.prototype.refresh = function (category) {
-        // this.newsPage.category = category;
-        // this.newsPage.refresh();
-        // this.router.navigateByUrl('/news', { skipLocationChange: true }).then(() => this.router.navigate(['/news']));
     };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1911,7 +1905,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-// import { NewsPage } from './news/news.page';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -1925,7 +1918,6 @@ var AppModule = /** @class */ (function () {
                 _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_4__["SplashScreen"],
                 _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_9__["BarcodeScanner"],
                 _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_10__["Geolocation"],
-                // NewsPage,
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicRouteStrategy"] }
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]

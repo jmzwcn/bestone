@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../news.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-news',
@@ -8,23 +8,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./news.page.scss'],
 })
 export class NewsPage implements OnInit {
-  category = 'general';
   data: any;
   constructor(
     private newsService: NewsService,
-    private router: Router) { }
+    private router: Router,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.refresh();
   }
 
   refresh() {
+    let category = this.activatedRoute.snapshot.params.category;
+    if (!category) {
+      category = 'general';
+    }
     this.newsService
-      .getData('top-headlines?country=us&category=' + this.category)
+      .getData('top-headlines?country=us&category=' + category)
       .subscribe(data => {
         this.data = data;
       });
-    // this.router.navigate(['/']);
   }
 
   gotoNewsDetail(article) {

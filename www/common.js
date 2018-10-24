@@ -827,22 +827,25 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var NewsPage = /** @class */ (function () {
-    function NewsPage(newsService, router) {
+    function NewsPage(newsService, router, activatedRoute) {
         this.newsService = newsService;
         this.router = router;
-        this.category = 'general';
+        this.activatedRoute = activatedRoute;
     }
     NewsPage.prototype.ngOnInit = function () {
         this.refresh();
     };
     NewsPage.prototype.refresh = function () {
         var _this = this;
+        var category = this.activatedRoute.snapshot.params.category;
+        if (!category) {
+            category = 'general';
+        }
         this.newsService
-            .getData('top-headlines?country=us&category=' + this.category)
+            .getData('top-headlines?country=us&category=' + category)
             .subscribe(function (data) {
             _this.data = data;
         });
-        // this.router.navigate(['/']);
     };
     NewsPage.prototype.gotoNewsDetail = function (article) {
         this.newsService.currentArticle = article;
@@ -855,7 +858,8 @@ var NewsPage = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./news.page.scss */ "./src/app/news/news.page.scss")],
         }),
         __metadata("design:paramtypes", [_news_service__WEBPACK_IMPORTED_MODULE_1__["NewsService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
     ], NewsPage);
     return NewsPage;
 }());
