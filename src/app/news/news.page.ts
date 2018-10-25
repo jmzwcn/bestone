@@ -10,7 +10,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class NewsPage implements OnInit {
   data: any;
   constructor(
-    public newsService: NewsService,
+    private newsService: NewsService,
     private router: Router,
     private activatedRoute: ActivatedRoute) { }
 
@@ -27,7 +27,7 @@ export class NewsPage implements OnInit {
       .getData('top-headlines?country=us&category=' + this.newsService.category)
       .subscribe(data => {
         this.data = data;
-        this.data.articles.filter(element => element.content);
+        this.data.articles = this.data.articles.filter(article => article.content);
       });
   }
 
