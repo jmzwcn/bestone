@@ -6,17 +6,17 @@
 <ion-content>
     <ion-list>
         <ion-item>
-            <ion-icon name="logo-ionic" slot="start"></ion-icon>
+            <ion-icon name="person" slot="start"></ion-icon>
             <ion-label>
                 <h2>Daniel</h2>
-                <h3>I'm a great man</h3>
+                <h3>I'm a super man</h3>
                 <p>Listen, I've had a pretty messed up day...</p>
             </ion-label>
         </ion-item>
-        <ion-fab vertical="center" horizontal="end" slot="fixed">
-            <ion-fab-button (click)="scanQR()">
-                <ion-icon name="qr-scanner"></ion-icon>
-            </ion-fab-button>
-        </ion-fab>
     </ion-list>
+    <ion-fab vertical="center" horizontal="center" slot="fixed">
+        <ion-fab-button (click)="scanQR()">
+            <ion-icon name="qr-scanner"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 </ion-content>

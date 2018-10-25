@@ -56,7 +56,7 @@ var AboutPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-title>About</ion-title>\n    </ion-toolbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item>\n            <ion-icon name=\"logo-ionic\" slot=\"start\"></ion-icon>\n            <ion-label>\n                <h2>Daniel</h2>\n                <h3>I'm a great man</h3>\n                <p>Listen, I've had a pretty messed up day...</p>\n            </ion-label>\n        </ion-item>\n        <ion-fab vertical=\"center\" horizontal=\"end\" slot=\"fixed\">\n            <ion-fab-button (click)=\"scanQR()\">\n                <ion-icon name=\"qr-scanner\"></ion-icon>\n            </ion-fab-button>\n        </ion-fab>\n    </ion-list>\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-title>About</ion-title>\n    </ion-toolbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item>\n            <ion-icon name=\"person\" slot=\"start\"></ion-icon>\n            <ion-label>\n                <h2>Daniel</h2>\n                <h3>I'm a super man</h3>\n                <p>Listen, I've had a pretty messed up day...</p>\n            </ion-label>\n        </ion-item>\n    </ion-list>\n    <ion-fab vertical=\"center\" horizontal=\"center\" slot=\"fixed\">\n        <ion-fab-button (click)=\"scanQR()\">\n            <ion-icon name=\"qr-scanner\"></ion-icon>\n        </ion-fab-button>\n    </ion-fab>\n</ion-content>"
 
 /***/ }),
 
@@ -224,7 +224,7 @@ var ContactPage = /** @class */ (function () {
     }
     ContactPage.prototype.getLocation = function () {
         this.geolocation.getCurrentPosition().then(function (resp) {
-            alert(resp.coords.latitude + resp.coords.longitude);
+            alert(resp.coords.latitude + ', ' + resp.coords.longitude);
             // resp.coords.latitude
             // resp.coords.longitude
         }).catch(function (error) {
