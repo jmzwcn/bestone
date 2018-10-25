@@ -4,12 +4,12 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Headline News
-      <ion-badge color="secondary">{{newsService.category}}</ion-badge>
+      <ion-badge color="success">{{newsService.category}}</ion-badge>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-slides pager="true">
+  <ion-slides pager="true" [options]="slideOpts">
     <ion-slide *ngFor="let article of data?.articles" (click)="gotoNewsDetail(article)">
       <ion-card-content>
         <p>
