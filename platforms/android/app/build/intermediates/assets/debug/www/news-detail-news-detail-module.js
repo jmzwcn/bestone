@@ -62,7 +62,7 @@ var NewsDetailPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>{{article?.title}}</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-card (click)=\"onBack()\">\n    <p>Source: {{article?.source.name}}\n      <br/>Time: {{article?.publishedAt}}</p>\n    <ion-img [src]=\"article?.urlToImage\"></ion-img>\n    <ion-card-content>\n      <p>{{article?.content}}</p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-icon name=\"book\"></ion-icon>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card (click)=\"onBack()\">\n    <ion-card-header>\n      <ion-card-subtitle>Source: {{article?.source.name}}\n        <br/>Time: {{article?.publishedAt}}</ion-card-subtitle>\n      <ion-card-title>{{article?.title}}</ion-card-title>\n    </ion-card-header>\n    <ion-item href=\"#\">\n    <ion-img [src]=\"article?.urlToImage\"></ion-img>\n  </ion-item>\n    <ion-card-content>\n      {{article?.content}}\n    </ion-card-content><br/>\n  </ion-card>\n</ion-content>"
 
 /***/ }),
 

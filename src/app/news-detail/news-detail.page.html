@@ -1,16 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>{{article?.title}}</ion-title>
+    <ion-icon name="book"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ion-card (click)="onBack()">
-    <p>Source: {{article?.source.name}}
-      <br/>Time: {{article?.publishedAt}}</p>
+    <ion-card-header>
+      <ion-card-subtitle>Source: {{article?.source.name}}
+        <br/>Time: {{article?.publishedAt}}</ion-card-subtitle>
+      <ion-card-title>{{article?.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-item href="#">
     <ion-img [src]="article?.urlToImage"></ion-img>
+  </ion-item>
     <ion-card-content>
-      <p>{{article?.content}}</p>
-    </ion-card-content>
+      {{article?.content}}
+    </ion-card-content><br/>
   </ion-card>
 </ion-content>
