@@ -4,7 +4,7 @@
             "outputFile": "/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/44f5f8d28dbad0e5bae0d95271b6b188/res/values-v24/values-v24.xml",
+                    "source": "/home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4c75f08cc03980075c283bf0089a9ab2/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

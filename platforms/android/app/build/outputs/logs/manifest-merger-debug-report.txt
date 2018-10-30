@@ -4,18 +4,18 @@ ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/ma
 INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
 INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
 INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
-MERGED from [:barcodescanner-release-2.1.5:] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/1cec60ae8619f3f18fe29fc7526a06a7/AndroidManifest.xml:2:1-14:12
-MERGED from [com.android.support:support-v4:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/f7703e9d3930b7cdb6c0ed797030b3af/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/44f5f8d28dbad0e5bae0d95271b6b188/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/12e3f6140c6ac45b091c05142de54c42/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/0adb8d0d463a7efef989d24d402c4244/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/044680260cadeaf07eeaadce1367f3d4/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/f227555169a0cee0c545005d465dd206/AndroidManifest.xml:17:1-22:12
+MERGED from [:barcodescanner-release-2.1.5:] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/cfa680df2c1ae0f3d41db681e7a08536/AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:support-v4:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/03695cbaf01b8a282f044df96a71e22f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4c75f08cc03980075c283bf0089a9ab2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/06a3b3e741b8f739c476aa9325be4a74/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/0d7984eb418f0ef6467354eb97c256bf/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/096bdace58b2505ca4bf3e68ff46ec05/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/6f938f3d9cb52b08a70dca5c4bf18e4e/AndroidManifest.xml:17:1-22:12
 MERGED from [:CordovaLib] /home/jmzwcn/work/src/github.com/bestone/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/696e39d5986678d2ffafc8b12d5adea2/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/e1918b5f09741330ef8898c174343f05/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/89f2f43d8f93d1b871361227d59f23e2/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/593dd4e8aa245d943f2dd452f221a4e7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/901db68e05eec33ebd8102aa054adabb/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/603c2074b9b3e5e6c9404abeab6f6968/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/11fb873ea2c4382457d06097d1737087/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/4b458a30d8c6634986f4242203daffa8/AndroidManifest.xml:17:1-22:12
 INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
 INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
 INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
@@ -55,8 +55,8 @@ ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/ma
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:4:22-64
 application
 ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:5:5-14:19
-MERGED from [:barcodescanner-release-2.1.5:] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/1cec60ae8619f3f18fe29fc7526a06a7/AndroidManifest.xml:11:5-12:19
-MERGED from [:barcodescanner-release-2.1.5:] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/1cec60ae8619f3f18fe29fc7526a06a7/AndroidManifest.xml:11:5-12:19
+MERGED from [:barcodescanner-release-2.1.5:] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/cfa680df2c1ae0f3d41db681e7a08536/AndroidManifest.xml:11:5-12:19
+MERGED from [:barcodescanner-release-2.1.5:] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/cfa680df2c1ae0f3d41db681e7a08536/AndroidManifest.xml:11:5-12:19
 	android:supportsRtl
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:5:114-140
 	android:label
@@ -113,57 +113,57 @@ ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/ma
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:13:41-109
 uses-sdk
 ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:15:5-74
-MERGED from [:barcodescanner-release-2.1.5:] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/1cec60ae8619f3f18fe29fc7526a06a7/AndroidManifest.xml:7:5-9:41
-MERGED from [:barcodescanner-release-2.1.5:] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/1cec60ae8619f3f18fe29fc7526a06a7/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/f7703e9d3930b7cdb6c0ed797030b3af/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/f7703e9d3930b7cdb6c0ed797030b3af/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/44f5f8d28dbad0e5bae0d95271b6b188/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/44f5f8d28dbad0e5bae0d95271b6b188/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/12e3f6140c6ac45b091c05142de54c42/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/12e3f6140c6ac45b091c05142de54c42/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/0adb8d0d463a7efef989d24d402c4244/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/0adb8d0d463a7efef989d24d402c4244/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/044680260cadeaf07eeaadce1367f3d4/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/044680260cadeaf07eeaadce1367f3d4/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/f227555169a0cee0c545005d465dd206/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/f227555169a0cee0c545005d465dd206/AndroidManifest.xml:20:5-44
+MERGED from [:barcodescanner-release-2.1.5:] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/cfa680df2c1ae0f3d41db681e7a08536/AndroidManifest.xml:7:5-9:41
+MERGED from [:barcodescanner-release-2.1.5:] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/cfa680df2c1ae0f3d41db681e7a08536/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/03695cbaf01b8a282f044df96a71e22f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/03695cbaf01b8a282f044df96a71e22f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4c75f08cc03980075c283bf0089a9ab2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4c75f08cc03980075c283bf0089a9ab2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/06a3b3e741b8f739c476aa9325be4a74/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/06a3b3e741b8f739c476aa9325be4a74/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/0d7984eb418f0ef6467354eb97c256bf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/0d7984eb418f0ef6467354eb97c256bf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/096bdace58b2505ca4bf3e68ff46ec05/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/096bdace58b2505ca4bf3e68ff46ec05/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/6f938f3d9cb52b08a70dca5c4bf18e4e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/6f938f3d9cb52b08a70dca5c4bf18e4e/AndroidManifest.xml:20:5-44
 MERGED from [:CordovaLib] /home/jmzwcn/work/src/github.com/bestone/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] /home/jmzwcn/work/src/github.com/bestone/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/696e39d5986678d2ffafc8b12d5adea2/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/696e39d5986678d2ffafc8b12d5adea2/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/e1918b5f09741330ef8898c174343f05/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/e1918b5f09741330ef8898c174343f05/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/89f2f43d8f93d1b871361227d59f23e2/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/89f2f43d8f93d1b871361227d59f23e2/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/593dd4e8aa245d943f2dd452f221a4e7/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/593dd4e8aa245d943f2dd452f221a4e7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/901db68e05eec33ebd8102aa054adabb/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/901db68e05eec33ebd8102aa054adabb/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/603c2074b9b3e5e6c9404abeab6f6968/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/603c2074b9b3e5e6c9404abeab6f6968/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/11fb873ea2c4382457d06097d1737087/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/11fb873ea2c4382457d06097d1737087/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/4b458a30d8c6634986f4242203daffa8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/jmzwcn/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/4b458a30d8c6634986f4242203daffa8/AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:15:42-71
 	android:minSdkVersion
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:15:15-41
-uses-permission#android.permission.CAMERA
-ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:16:5-65
-	android:name
-		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:16:22-62
-uses-permission#android.permission.FLASHLIGHT
-ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:17:5-69
-	android:name
-		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:17:22-66
-uses-feature#android.hardware.camera
-ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:18:5-84
-	android:required
-		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:18:58-81
-	android:name
-		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:18:19-57
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:19:5-81
+ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:16:5-81
 	android:name
-		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:19:22-78
+		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:16:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:20:5-79
+ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:17:5-79
 	android:name
-		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:20:22-76
+		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:17:22-76
 uses-feature#android.hardware.location.gps
-ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:21:5-66
+ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:18:5-66
 	android:name
-		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:21:19-63
+		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:18:19-63
+uses-permission#android.permission.CAMERA
+ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:19:5-65
+	android:name
+		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:19:22-62
+uses-permission#android.permission.FLASHLIGHT
+ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:20:5-69
+	android:name
+		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:20:22-66
+uses-feature#android.hardware.camera
+ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:21:5-84
+	android:required
+		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:21:58-81
+	android:name
+		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:21:19-57

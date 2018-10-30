@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-icon name="book"></ion-icon>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-round-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>News detail</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,11 +14,12 @@
         <br/>Time: {{article?.publishedAt}}</ion-card-subtitle>
       <ion-card-title>{{article?.title}}</ion-card-title>
     </ion-card-header>
-    <ion-item href="#">
-    <ion-img [src]="article?.urlToImage"></ion-img>
-  </ion-item>
+    <ion-item>
+      <ion-img [src]="article?.urlToImage"></ion-img>
+    </ion-item>
     <ion-card-content>
       {{article?.content}}
-    </ion-card-content><br/>
+    </ion-card-content>
+    <br/>
   </ion-card>
 </ion-content>
