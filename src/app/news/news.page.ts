@@ -8,9 +8,6 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./news.page.scss'],
 })
 export class NewsPage implements OnInit {
-  slideOpts = {
-    effect: 'cube'
-  };
   data: any;
   constructor(
     private newsService: NewsService,

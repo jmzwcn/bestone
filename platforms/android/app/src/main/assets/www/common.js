@@ -787,7 +787,7 @@ var NewsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Headline News\n      <ion-badge color=\"success\">{{newsService.category}}</ion-badge>\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-slides pager=\"true\" options=\"slideOpts\">\n    <ion-slide *ngFor=\"let article of data?.articles\" (click)=\"gotoNewsDetail(article)\">\n      <ion-card-content>\n                  <ion-img [src]=\"article.urlToImage\"></ion-img>\n                <ion-card-title>{{article.title}}</ion-card-title>\n        <p>{{article.content}}</p>\n        <br/>\n      </ion-card-content>\n    </ion-slide>\n  </ion-slides>\n  <ion-fab vertical=\"bottom\" horizontal=\"end\">\n    <ion-fab-button>\n      <ion-icon name=\"share\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Headline News\n      <ion-badge color=\"success\">{{newsService.category}}</ion-badge>\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-slides pager=\"true\">\n    <ion-slide *ngFor=\"let article of data?.articles\" (click)=\"gotoNewsDetail(article)\">\n      <ion-card-content>\n        <ion-img [src]=\"article.urlToImage\"></ion-img>\n        <ion-card-title>{{article.title}}</ion-card-title>\n        <p>{{article.content}}</p>\n        <br/>\n      </ion-card-content>\n    </ion-slide>\n  </ion-slides>\n  <ion-fab vertical=\"bottom\" horizontal=\"end\">\n    <ion-fab-button>\n      <ion-icon name=\"share\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>"
 
 /***/ }),
 
@@ -832,9 +832,6 @@ var NewsPage = /** @class */ (function () {
         this.newsService = newsService;
         this.router = router;
         this.activatedRoute = activatedRoute;
-        this.slideOpts = {
-            effect: 'cube'
-        };
     }
     NewsPage.prototype.ngOnInit = function () {
         this.refresh();

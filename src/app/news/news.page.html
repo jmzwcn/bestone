@@ -9,11 +9,11 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-slides pager="true" options="slideOpts">
+  <ion-slides pager="true">
     <ion-slide *ngFor="let article of data?.articles" (click)="gotoNewsDetail(article)">
       <ion-card-content>
-                  <ion-img [src]="article.urlToImage"></ion-img>
-                <ion-card-title>{{article.title}}</ion-card-title>
+        <ion-img [src]="article.urlToImage"></ion-img>
+        <ion-card-title>{{article.title}}</ion-card-title>
         <p>{{article.content}}</p>
         <br/>
       </ion-card-content>
