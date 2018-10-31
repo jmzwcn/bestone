@@ -1658,10 +1658,12 @@ var map = {
 	],
 	"./news/news.module": [
 		"./src/app/news/news.module.ts",
+		"news-news-module~tabs-tabs-module",
 		"common"
 	],
 	"./tabs/tabs.module": [
 		"./src/app/tabs/tabs.module.ts",
+		"news-news-module~tabs-tabs-module",
 		"common",
 		"tabs-tabs-module"
 	]
