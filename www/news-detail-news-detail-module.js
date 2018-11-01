@@ -62,7 +62,7 @@ var NewsDetailPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>News detail</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-card (click)=\"onBack()\">\n    <ion-card-header>\n      <ion-card-subtitle>Source: {{article?.source.name}}\n        <br/>Time: {{article?.publishedAt}}</ion-card-subtitle>\n      <ion-card-title>{{article?.title}}</ion-card-title>\n    </ion-card-header>\n    <ion-item>\n      <ion-img [src]=\"article?.urlToImage\"></ion-img>\n    </ion-item>\n    <ion-card-content>\n      {{article?.content}}\n    </ion-card-content>\n    <br/>\n  </ion-card>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button icon=\"skip-backward\"></ion-back-button>\n    </ion-buttons>\n    <ion-title>News detail</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-card (click)=\"onBack()\">\n    <ion-card-header>\n      <ion-card-subtitle>Source: {{article?.source.name}}\n        <br/>Time: {{article?.publishedAt}}</ion-card-subtitle>\n      <ion-card-title>{{article?.title}}</ion-card-title>\n    </ion-card-header>\n    <ion-item>\n      <ion-img [src]=\"article?.urlToImage\"></ion-img>\n    </ion-item>\n    <ion-card-content>\n      {{article?.content}}\n    </ion-card-content>\n    <br/>\n  </ion-card>\n</ion-content>"
 
 /***/ }),
 
