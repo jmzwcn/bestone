@@ -217,10 +217,11 @@ var NewsPage = /** @class */ (function () {
     NewsPage.prototype.presentAlertPrompt = function () {
         return __awaiter(this, void 0, void 0, function () {
             var alert;
+            var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.alertController.create({
-                            header: '全互联网搜索',
+                            header: '全网热搜',
                             inputs: [
                                 {
                                     name: 'keyword',
@@ -239,8 +240,7 @@ var NewsPage = /** @class */ (function () {
                                 }, {
                                     text: 'Ok',
                                     handler: function (data) {
-                                        console.log(data.keyword);
-                                        // this.refresh();
+                                        _this.search(data.keyword);
                                     }
                                 }
                             ]
@@ -253,6 +253,17 @@ var NewsPage = /** @class */ (function () {
                         return [2 /*return*/];
                 }
             });
+        });
+    };
+    NewsPage.prototype.search = function (keyword) {
+        var _this = this;
+        this.newsService
+            .getData('everything?q=' + keyword)
+            .subscribe(function (data) {
+            // this.data = null;
+            _this.data = data;
+            _this.data.articles = _this.data.articles.filter(function (article) { return article.content; });
+            // $scope.refreshItems();
         });
     };
     NewsPage = __decorate([

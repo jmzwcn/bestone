@@ -42,7 +42,7 @@ export class NewsPage implements OnInit {
 
   async presentAlertPrompt() {
     const alert = await this.alertController.create({
-      header: '全互联网搜索',
+      header: '全网热搜',
       inputs: [
         {
           name: 'keyword',
@@ -61,8 +61,7 @@ export class NewsPage implements OnInit {
         }, {
           text: 'Ok',
           handler: data => {
-            console.log(data.keyword);
-            // this.refresh();
+            this.search(data.keyword);
           }
         }
       ]
@@ -70,4 +69,14 @@ export class NewsPage implements OnInit {
     await alert.present();
   }
 
+  search(keyword) {
+    this.newsService
+      .getData('everything?q=' + keyword)
+      .subscribe(data => {
+        // this.data = null;
+        this.data = data;
+        this.data.articles = this.data.articles.filter(article => article.content);
+        // $scope.refreshItems();
+      });
+  }
 }
