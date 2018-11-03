@@ -103,9 +103,28 @@ var ContactPage = /** @class */ (function () {
     }
     ContactPage.prototype.getLocation = function () {
         this.geolocation.getCurrentPosition().then(function (resp) {
-            alert(resp.coords.latitude + ', ' + resp.coords.longitude);
-            // resp.coords.latitude
-            // resp.coords.longitude
+            console.log(resp.coords.latitude + ', ' + resp.coords.longitude);
+            AMap.service('AMap.Geocoder', function () {
+                var geocoder = new AMap.Geocoder({
+                // city: "010"
+                });
+                console.log(geocoder, 'fuwu');
+                var positionInfo = [resp.coords.longitude + '', resp.coords.latitude + ''];
+                console.log(positionInfo);
+                geocoder.getAddress(positionInfo, function (status, result) {
+                    console.log(status, result, '转换定位信息');
+                    if (status === 'complete' && result.info === 'OK') {
+                        // 获得了有效的地址信息:
+                        alert(result.regeocode.formattedAddress);
+                        // console.log(result.addresscomponent.building);
+                        // this.formattedAddress = result.regeocode.formattedAddress;
+                    }
+                    else {
+                        // 获取地址失败
+                        console.log('获取地址失败');
+                    }
+                });
+            });
         }).catch(function (error) {
             console.log('Error getting location', error);
         });
