@@ -199,7 +199,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n      <ion-buttons slot=\"start\">\n        <ion-menu-button></ion-menu-button>\n      </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  The world is your oyster.\n  <p>If you get lost, the <a target=\"_blank\" rel=\"noopener\" href=\"https://ionicframework.com/docs\">docs</a> will be your guide.</p>\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>定位</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <div #map_container class=\"map_container\"></div>\n</ion-content>"
 
 /***/ }),
 
@@ -210,7 +210,7 @@ module.exports = "<ion-header>\n  <ion-toolbar>\n      <ion-buttons slot=\"start
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".map_container {\n  width: 100%;\n  height: 100%; }\n"
 
 /***/ }),
 
@@ -225,22 +225,43 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePage", function() { return HomePage; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var HomePage = /** @class */ (function () {
-    function HomePage() {
+    function HomePage(geolocation) {
+        this.geolocation = geolocation;
     }
+    HomePage.prototype.ionViewDidEnter = function () {
+        this.map = new AMap.Map(this.map_container.nativeElement, {
+            view: new AMap.View2D({
+                zoom: 11,
+                rotateEnable: true,
+                center: [116.2314939, 40.2071555],
+                showBuildingBlock: true
+            })
+        });
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('map_container'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], HomePage.prototype, "map_container", void 0);
     HomePage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-home',
             template: __webpack_require__(/*! ./home.page.html */ "./src/app/home/home.page.html"),
             styles: [__webpack_require__(/*! ./home.page.scss */ "./src/app/home/home.page.scss")]
-        })
+        }),
+        __metadata("design:paramtypes", [_ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_1__["Geolocation"]])
     ], HomePage);
     return HomePage;
 }());
@@ -314,7 +335,7 @@ var TabsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-tabs>\n  <ion-tab label=\"Home\" icon=\"home\" href=\"/tabs/(home:home)\">\n    <ion-router-outlet name=\"home\"></ion-router-outlet>\n  </ion-tab>\n  <ion-tab label=\"News\" icon=\"information-circle\" href=\"/tabs/(news:news)\">\n    <ion-router-outlet name=\"news\"></ion-router-outlet>\n  </ion-tab>\n  <ion-tab label=\"Contact\" icon=\"contacts\" href=\"/tabs/(contact:contact)\">\n    <ion-router-outlet name=\"contact\"></ion-router-outlet>\n  </ion-tab>\n</ion-tabs>"
+module.exports = "<ion-tabs>\n  <ion-tab label=\"News\" icon=\"information-circle\" href=\"/tabs/(news:news)\">\n    <ion-router-outlet name=\"news\"></ion-router-outlet>\n  </ion-tab>\n  <ion-tab label=\"Navigation\" icon=\"home\" href=\"/tabs/(home:home)\">\n    <ion-router-outlet name=\"home\"></ion-router-outlet>\n  </ion-tab>\n  <ion-tab label=\"Contact\" icon=\"contacts\" href=\"/tabs/(contact:contact)\">\n    <ion-router-outlet name=\"contact\"></ion-router-outlet>\n  </ion-tab>\n</ion-tabs>"
 
 /***/ }),
 

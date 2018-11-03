@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { NewsService } from '../news.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { AlertController } from '@ionic/angular';
@@ -8,20 +8,18 @@ import { AlertController } from '@ionic/angular';
   templateUrl: './news.page.html',
   styleUrls: ['./news.page.scss'],
 })
-export class NewsPage implements OnInit {
+export class NewsPage {
   data: any;
   constructor(
     private newsService: NewsService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private alertController: AlertController,
-    private ref: ChangeDetectorRef) { }
-
-  ngOnInit() {
-    this.refresh();
+    private ref: ChangeDetectorRef) {
+    this.reload();
   }
 
-  refresh() {
+  reload() {
     const category = this.activatedRoute.snapshot.params.category;
     if (category) {
       this.newsService.category = category;

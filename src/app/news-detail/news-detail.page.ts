@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NewsService } from '../news.service';
 import { Router } from '@angular/router';
 
@@ -7,16 +7,10 @@ import { Router } from '@angular/router';
   templateUrl: './news-detail.page.html',
   styleUrls: ['./news-detail.page.scss'],
 })
-export class NewsDetailPage implements OnInit {
-  article;
+export class NewsDetailPage {
   constructor(private newsService: NewsService, private router: Router) { }
-
-  ngOnInit() {
-    this.article = this.newsService.currentArticle;
-  }
 
   onBack() {
     this.router.navigate(['/news/' + this.newsService.category]);
-   // this.article = null;
   }
 }

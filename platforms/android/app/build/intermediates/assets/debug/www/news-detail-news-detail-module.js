@@ -62,7 +62,7 @@ var NewsDetailPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n      <ion-title>News detail</ion-title>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-card (click)=\"onBack()\">\n    <ion-card-header>\n      <ion-card-subtitle>Source: {{article?.source.name}}\n        <br/>Time: {{article?.publishedAt}}</ion-card-subtitle>\n      <ion-card-title>{{article?.title}}</ion-card-title>\n    </ion-card-header>\n    <ion-item>\n      <ion-img [src]=\"article?.urlToImage\"></ion-img>\n    </ion-item>\n    <ion-card-content>\n      {{article?.content}}\n    </ion-card-content>\n    <br/>\n  </ion-card>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n      <ion-title>News detail</ion-title>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-card (click)=\"onBack()\">\n    <ion-card-header>\n      <ion-card-subtitle>Source: {{newsService.currentArticle?.source.name}}\n        <br/>Time: {{newsService.currentArticle?.publishedAt}}</ion-card-subtitle>\n      <ion-card-title>{{newsService.currentArticle?.title}}</ion-card-title>\n    </ion-card-header>\n    <ion-item>\n      <ion-img [src]=\"newsService.currentArticle?.urlToImage\"></ion-img>\n    </ion-item>\n    <ion-card-content>\n      {{newsService.currentArticle?.content}}\n    </ion-card-content>\n    <br/>\n  </ion-card>\n</ion-content>"
 
 /***/ }),
 
@@ -107,12 +107,8 @@ var NewsDetailPage = /** @class */ (function () {
         this.newsService = newsService;
         this.router = router;
     }
-    NewsDetailPage.prototype.ngOnInit = function () {
-        this.article = this.newsService.currentArticle;
-    };
     NewsDetailPage.prototype.onBack = function () {
         this.router.navigate(['/news/' + this.newsService.category]);
-        // this.article = null;
     };
     NewsDetailPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

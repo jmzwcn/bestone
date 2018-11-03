@@ -1,4 +1,4 @@
-#Sat Nov 03 15:40:26 CST 2018
+#Sat Nov 03 21:17:32 CST 2018
 base.0=/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

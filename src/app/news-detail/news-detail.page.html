@@ -9,15 +9,15 @@
 <ion-content>
   <ion-card (click)="onBack()">
     <ion-card-header>
-      <ion-card-subtitle>Source: {{article?.source.name}}
-        <br/>Time: {{article?.publishedAt}}</ion-card-subtitle>
-      <ion-card-title>{{article?.title}}</ion-card-title>
+      <ion-card-subtitle>Source: {{newsService.currentArticle?.source.name}}
+        <br/>Time: {{newsService.currentArticle?.publishedAt}}</ion-card-subtitle>
+      <ion-card-title>{{newsService.currentArticle?.title}}</ion-card-title>
     </ion-card-header>
     <ion-item>
-      <ion-img [src]="article?.urlToImage"></ion-img>
+      <ion-img [src]="newsService.currentArticle?.urlToImage"></ion-img>
     </ion-item>
     <ion-card-content>
-      {{article?.content}}
+      {{newsService.currentArticle?.content}}
     </ion-card-content>
     <br/>
   </ion-card>

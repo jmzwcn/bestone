@@ -194,11 +194,9 @@ var NewsPage = /** @class */ (function () {
         this.activatedRoute = activatedRoute;
         this.alertController = alertController;
         this.ref = ref;
+        this.reload();
     }
-    NewsPage.prototype.ngOnInit = function () {
-        this.refresh();
-    };
-    NewsPage.prototype.refresh = function () {
+    NewsPage.prototype.reload = function () {
         var _this = this;
         var category = this.activatedRoute.snapshot.params.category;
         if (category) {
