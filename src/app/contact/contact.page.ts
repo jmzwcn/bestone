@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-scanner/ngx';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +8,9 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
   styleUrls: ['contact.page.scss']
 })
 export class ContactPage {
-  constructor(private geolocation: Geolocation) { }
+  constructor(
+    private geolocation: Geolocation,
+    private barcodeScanner: BarcodeScanner) { }
 
   getLocation() {
     this.geolocation.getCurrentPosition().then((resp) => {
@@ -24,5 +27,17 @@ export class ContactPage {
     //   // data.coords.latitude
     //   // data.coords.longitude
     //  });
+  }
+
+  scanQR() {
+    const options: BarcodeScannerOptions = {
+      showTorchButton: true, // iOS and Android
+    };
+    this.barcodeScanner.scan(options).then(barcodeData => {
+      // console.log('Barcode data', barcodeData);
+      alert(barcodeData.text);
+    }).catch(err => {
+      console.log('Error', err);
+    });
   }
 }

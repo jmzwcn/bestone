@@ -260,7 +260,6 @@ var NewsPage = /** @class */ (function () {
         this.newsService
             .getData('everything?q=' + keyword)
             .subscribe(function (data) {
-            // this.data = null;
             _this.data = data;
             _this.data.articles = _this.data.articles.filter(function (article) { return article.content; });
             // $scope.refreshItems();

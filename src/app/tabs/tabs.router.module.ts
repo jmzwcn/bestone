@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
-import { AboutPage } from '../about/about.page';
+import { HomePage } from '../home/home.page';
+import { NewsPage } from '../news/news.page';
 import { ContactPage } from '../contact/contact.page';
-import {NewsPage} from '../news/news.page';
 
 const routes: Routes = [
   {
@@ -13,18 +13,18 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/tabs/(news:news)',
+        redirectTo: '/tabs/(home:home)',
         pathMatch: 'full',
+      },
+      {
+        path: 'home',
+        outlet: 'home',
+        component: HomePage
       },
       {
         path: 'news',
         outlet: 'news',
         component: NewsPage
-      },
-      {
-        path: 'about',
-        outlet: 'about',
-        component: AboutPage
       },
       {
         path: 'contact',
@@ -35,7 +35,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/(news:news)',
+    redirectTo: '/tabs/(home:home)',
     pathMatch: 'full'
   }
 ];
@@ -44,4 +44,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

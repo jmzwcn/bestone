@@ -73,7 +73,6 @@ export class NewsPage implements OnInit {
     this.newsService
       .getData('everything?q=' + keyword)
       .subscribe(data => {
-        // this.data = null;
         this.data = data;
         this.data.articles = this.data.articles.filter(article => article.content);
         // $scope.refreshItems();

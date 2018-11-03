@@ -1815,7 +1815,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent.prototype.initializeApp = function () {
         var _this = this;
         this.platform.ready().then(function () {
-            _this.statusBar.styleDefault();
+            _this.statusBar.styleBlackTranslucent();
             _this.splashScreen.hide();
         });
         this.platform.backButton.subscribe(function () { return __awaiter(_this, void 0, void 0, function () {
