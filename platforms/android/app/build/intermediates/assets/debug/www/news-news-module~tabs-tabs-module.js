@@ -188,11 +188,12 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 var NewsPage = /** @class */ (function () {
-    function NewsPage(newsService, router, activatedRoute, alertController) {
+    function NewsPage(newsService, router, activatedRoute, alertController, ref) {
         this.newsService = newsService;
         this.router = router;
         this.activatedRoute = activatedRoute;
         this.alertController = alertController;
+        this.ref = ref;
     }
     NewsPage.prototype.ngOnInit = function () {
         this.refresh();
@@ -262,7 +263,7 @@ var NewsPage = /** @class */ (function () {
             .subscribe(function (data) {
             _this.data = data;
             _this.data.articles = _this.data.articles.filter(function (article) { return article.content; });
-            // $scope.refreshItems();
+            _this.ref.detectChanges();
         });
     };
     NewsPage = __decorate([
@@ -274,7 +275,8 @@ var NewsPage = /** @class */ (function () {
         __metadata("design:paramtypes", [_news_service__WEBPACK_IMPORTED_MODULE_1__["NewsService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AlertController"]])
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AlertController"],
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]])
     ], NewsPage);
     return NewsPage;
 }());

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { NewsService } from '../news.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { AlertController } from '@ionic/angular';
@@ -9,13 +9,13 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./news.page.scss'],
 })
 export class NewsPage implements OnInit {
-  // keyword: String = 'James';
   data: any;
   constructor(
     private newsService: NewsService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private alertController: AlertController) { }
+    private alertController: AlertController,
+    private ref: ChangeDetectorRef) { }
 
   ngOnInit() {
     this.refresh();
@@ -75,7 +75,7 @@ export class NewsPage implements OnInit {
       .subscribe(data => {
         this.data = data;
         this.data.articles = this.data.articles.filter(article => article.content);
-        // $scope.refreshItems();
+        this.ref.detectChanges();
       });
   }
 }

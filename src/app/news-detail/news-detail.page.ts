@@ -16,7 +16,7 @@ export class NewsDetailPage implements OnInit {
   }
 
   onBack() {
-    this.router.navigate(['/']);
-    this.article = null;
+    this.router.navigate(['/news/' + this.newsService.category]);
+   // this.article = null;
   }
 }

@@ -111,8 +111,8 @@ var NewsDetailPage = /** @class */ (function () {
         this.article = this.newsService.currentArticle;
     };
     NewsDetailPage.prototype.onBack = function () {
-        this.router.navigate(['/']);
-        this.article = null;
+        this.router.navigate(['/news/' + this.newsService.category]);
+        // this.article = null;
     };
     NewsDetailPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
