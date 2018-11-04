@@ -11,6 +11,6 @@ export class NewsDetailPage {
   constructor(private newsService: NewsService, private router: Router) { }
 
   onBack() {
-    this.router.navigate(['/news/' + this.newsService.category]);
+    this.router.navigateByUrl('/tabs/(news:news)');
   }
 }

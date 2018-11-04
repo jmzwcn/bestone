@@ -218,7 +218,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>定位</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <div #map_container class=\"map_container\"></div>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n      <ion-button (click)=\"getLocation()\">\n        <ion-icon name=\"eye\"></ion-icon>\n        定位</ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <div #map_container class=\"map_container\"></div>\n</ion-content>"
 
 /***/ }),
 
@@ -259,16 +259,55 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var HomePage = /** @class */ (function () {
     function HomePage(geolocation) {
         this.geolocation = geolocation;
+        // this.map.center([116.2314939, 40.2071555]);
     }
     HomePage.prototype.ionViewDidEnter = function () {
+        var _this = this;
         this.map = new AMap.Map(this.map_container.nativeElement, {
             view: new AMap.View2D({
                 zoom: 11,
                 rotateEnable: true,
-                center: [116.2314939, 40.2071555],
+                // center: [116.2314939, 40.2071555], // 设置地图中心点坐标
                 showBuildingBlock: true
             })
         });
+        AMap.service('AMap.Geolocation', function () {
+            var geolocation = new AMap.Geolocation({});
+            _this.map.addControl(geolocation);
+        });
+    };
+    HomePage.prototype.getLocation = function () {
+        var _this = this;
+        this.geolocation.getCurrentPosition().then(function (resp) {
+            AMap.service('AMap.Geocoder', function () {
+                var positionInfo = [resp.coords.longitude + '', resp.coords.latitude + ''];
+                _this.map.setCenter(positionInfo);
+                var geocoder = new AMap.Geocoder({});
+                geocoder.getAddress(positionInfo, function (status, result) {
+                    if (status === 'complete' && result.info === 'OK') {
+                        var marker = new AMap.Marker({
+                            map: _this.map,
+                            position: positionInfo
+                        });
+                        marker.setLabel({
+                            offset: new AMap.Pixel(20, 20),
+                            content: result.regeocode.formattedAddress
+                        });
+                    }
+                    else {
+                        console.log('获取地址失败');
+                    }
+                });
+            });
+        }).catch(function (error) {
+            console.log('Error getting location', error);
+        });
+        //  let watch = this.geolocation.watchPosition();
+        //  watch.subscribe((data) => {
+        //   // data can be a set of coordinates, or an error (if an error occurred).
+        //   // data.coords.latitude
+        //   // data.coords.longitude
+        //  });
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('map_container'),
