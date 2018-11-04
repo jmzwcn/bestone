@@ -56,6 +56,6 @@ export class AppComponent {
   gotoNews(category) {
     // alert(category);
     this.newsService.category = category;
-    this.router.navigateByUrl('/tabs/(news:news)');
+    // this.router.navigateByUrl('/tabs/(news:news)');
   }
 }

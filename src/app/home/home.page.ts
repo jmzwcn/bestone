@@ -25,10 +25,10 @@ export class HomePage {
         showBuildingBlock: true
       })
     });
-    AMap.service('AMap.Geolocation', () => {
-      const geolocation = new AMap.Geolocation({});
-      this.map.addControl(geolocation);
-    });
+    // AMap.service('AMap.Geolocation', () => {
+    //   const geolocation = new AMap.Geolocation({});
+    //   this.map.addControl(geolocation);
+    // });
   }
 
   getLocation() {

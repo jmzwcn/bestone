@@ -1858,7 +1858,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent.prototype.gotoNews = function (category) {
         // alert(category);
         this.newsService.category = category;
-        this.router.navigateByUrl('/tabs/(news:news)');
+        // this.router.navigateByUrl('/tabs/(news:news)');
     };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
