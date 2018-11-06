@@ -1,0 +1,8 @@
+<ion-list>
+  <!-- <ion-list-header>Category</ion-list-header> -->
+  <br/>
+  <ion-item *ngFor="let category of categories" (click)="itemClick(category.name)">
+    <ion-icon slot="start" [name]="category.icon"></ion-icon>
+    <ion-label>{{category.name}}</ion-label>
+  </ion-item>
+</ion-list>

@@ -4,8 +4,14 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Headline News
-      <ion-badge color="success">{{newsService.category}}</ion-badge>
+      <ion-badge color="success">{{category}}</ion-badge>
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon name="grid"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 <ion-content>

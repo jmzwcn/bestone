@@ -1653,14 +1653,17 @@ webpackContext.id = "./node_modules/@ionic/core/dist/ionic/svg sync ./!./!./node
 var map = {
 	"./news-detail/news-detail.module": [
 		"./src/app/news-detail/news-detail.module.ts",
+		"common",
 		"news-detail-news-detail-module"
 	],
 	"./news/news.module": [
 		"./src/app/news/news.module.ts",
+		"news-news-module~tabs-tabs-module",
 		"common"
 	],
 	"./tabs/tabs.module": [
 		"./src/app/tabs/tabs.module.ts",
+		"news-news-module~tabs-tabs-module",
 		"common",
 		"tabs-tabs-module"
 	]
@@ -1754,7 +1757,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/index.js");
 /* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
 /* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
-/* harmony import */ var _news_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./news.service */ "./src/app/news.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1804,15 +1806,13 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-
 var AppComponent = /** @class */ (function () {
-    function AppComponent(platform, splashScreen, statusBar, alertCtrl, router, newsService) {
+    function AppComponent(platform, splashScreen, statusBar, alertCtrl, router) {
         this.platform = platform;
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
         this.alertCtrl = alertCtrl;
         this.router = router;
-        this.newsService = newsService;
         this.initializeApp();
     }
     AppComponent.prototype.initializeApp = function () {
@@ -1855,11 +1855,6 @@ var AppComponent = /** @class */ (function () {
             });
         }); });
     };
-    AppComponent.prototype.gotoNews = function (category) {
-        // alert(category);
-        this.newsService.category = category;
-        // this.router.navigateByUrl('/tabs/(news:news)');
-    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
@@ -1869,8 +1864,7 @@ var AppComponent = /** @class */ (function () {
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"],
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            _news_service__WEBPACK_IMPORTED_MODULE_5__["NewsService"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -1900,6 +1894,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic-native/barcode-scanner/ngx */ "./node_modules/@ionic-native/barcode-scanner/ngx/index.js");
 /* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
+/* harmony import */ var _popover_popover_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./popover/popover.component */ "./src/app/popover/popover.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1917,13 +1912,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
-            entryComponents: [],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _popover_popover_component__WEBPACK_IMPORTED_MODULE_11__["PopoverComponent"]],
+            entryComponents: [_popover_popover_component__WEBPACK_IMPORTED_MODULE_11__["PopoverComponent"]],
             imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"]],
             providers: [
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_5__["StatusBar"],
@@ -1942,19 +1938,40 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/news.service.ts":
-/*!*********************************!*\
-  !*** ./src/app/news.service.ts ***!
-  \*********************************/
-/*! exports provided: NewsService */
+/***/ "./src/app/popover/popover.component.html":
+/*!************************************************!*\
+  !*** ./src/app/popover/popover.component.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ion-list>\n  <!-- <ion-list-header>Category</ion-list-header> -->\n  <br/>\n  <ion-item *ngFor=\"let category of categories\" (click)=\"itemClick(category.name)\">\n    <ion-icon slot=\"start\" [name]=\"category.icon\"></ion-icon>\n    <ion-label>{{category.name}}</ion-label>\n  </ion-item>\n</ion-list>"
+
+/***/ }),
+
+/***/ "./src/app/popover/popover.component.scss":
+/*!************************************************!*\
+  !*** ./src/app/popover/popover.component.scss ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/popover/popover.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/popover/popover.component.ts ***!
+  \**********************************************/
+/*! exports provided: PopoverComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsService", function() { return NewsService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PopoverComponent", function() { return PopoverComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1966,24 +1983,33 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
-var API_URL = _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl;
-var API_KEY = _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiKey;
-var NewsService = /** @class */ (function () {
-    function NewsService(http) {
-        this.http = http;
-        this.category = 'general';
+var PopoverComponent = /** @class */ (function () {
+    function PopoverComponent(popCtl) {
+        this.popCtl = popCtl;
+        this.categories = [
+            { 'name': 'general', 'value': 'general', 'icon': 'home' },
+            { 'name': 'business', 'value': 'business', 'icon': 'at' },
+            { 'name': 'entertainment', 'value': 'entertainment', 'icon': 'apps' },
+            { 'name': 'health', 'value': 'health', 'icon': 'medkit' },
+            { 'name': 'science', 'value': 'science', 'icon': 'school' },
+            { 'name': 'sports', 'value': 'sports', 'icon': 'football' },
+            { 'name': 'technology', 'value': 'technology', 'icon': 'cloudy' },
+        ];
     }
-    NewsService.prototype.getData = function (url) {
-        return this.http.get(API_URL + "/" + url + "&apiKey=" + API_KEY);
+    PopoverComponent.prototype.ngOnInit = function () {
     };
-    NewsService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: 'root'
+    PopoverComponent.prototype.itemClick = function (value) {
+        this.popCtl.dismiss(value);
+    };
+    PopoverComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-popover',
+            template: __webpack_require__(/*! ./popover.component.html */ "./src/app/popover/popover.component.html"),
+            styles: [__webpack_require__(/*! ./popover.component.scss */ "./src/app/popover/popover.component.scss")]
         }),
-        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
-    ], NewsService);
-    return NewsService;
+        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["PopoverController"]])
+    ], PopoverComponent);
+    return PopoverComponent;
 }());
 
 

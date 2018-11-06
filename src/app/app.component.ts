@@ -4,8 +4,6 @@ import { Platform, AlertController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
-import { NewsService } from './news.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -18,7 +16,6 @@ export class AppComponent {
     private statusBar: StatusBar,
     private alertCtrl: AlertController,
     private router: Router,
-    private newsService: NewsService
   ) {
     this.initializeApp();
   }
@@ -51,11 +48,5 @@ export class AppComponent {
       });
       await alert.present();
     });
-  }
-
-  gotoNews(category) {
-    // alert(category);
-    this.newsService.category = category;
-    // this.router.navigateByUrl('/tabs/(news:news)');
   }
 }

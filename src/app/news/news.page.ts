@@ -1,7 +1,9 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { NewsService } from '../news.service';
-import { Router, ActivatedRoute, Params } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { Router, Params } from '@angular/router';
+import { AlertController, PopoverController, NavController } from '@ionic/angular';
+
+import { PopoverComponent } from '../popover/popover.component';
 
 @Component({
   selector: 'app-news',
@@ -10,22 +12,19 @@ import { AlertController } from '@ionic/angular';
 })
 export class NewsPage {
   data: any;
+  category = 'general';
   constructor(
     private newsService: NewsService,
     private router: Router,
-    private activatedRoute: ActivatedRoute,
     private alertController: AlertController,
+    private popoverController: PopoverController,
     private ref: ChangeDetectorRef) {
-    this.reload();
+    this.refresh();
   }
 
-  reload() {
-    const category = this.activatedRoute.snapshot.params.category;
-    if (category) {
-      this.newsService.category = category;
-    }
+  refresh() {
     this.newsService
-      .getData('top-headlines?country=us&category=' + this.newsService.category)
+      .getData('top-headlines?country=us&category=' + this.category)
       .subscribe(data => {
         this.data = data;
         this.data.articles = this.data.articles.filter(article => article.content);
@@ -75,5 +74,18 @@ export class NewsPage {
         this.data.articles = this.data.articles.filter(article => article.content);
         this.ref.detectChanges();
       });
+  }
+
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+      component: PopoverComponent,
+      event: ev,
+      translucent: true
+    });
+
+    await popover.present();
+    const result = await popover.onDidDismiss();
+    this.category = result.data;
+    this.refresh();
   }
 }
