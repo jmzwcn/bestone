@@ -10,13 +10,13 @@ export class PopoverComponent implements OnInit {
   categories: any;
   constructor(private popCtl: PopoverController) {
     this.categories = [
-      { 'name': 'general', 'value': 'general', 'icon': 'home' },
-      { 'name': 'business', 'value': 'business', 'icon': 'at' },
-      { 'name': 'entertainment', 'value': 'entertainment', 'icon': 'apps' },
-      { 'name': 'health', 'value': 'health', 'icon': 'medkit' },
-      { 'name': 'science', 'value': 'science', 'icon': 'school' },
-      { 'name': 'sports', 'value': 'sports', 'icon': 'football' },
-      { 'name': 'technology', 'value': 'technology', 'icon': 'cloudy' },
+      { 'name': 'general', 'note': 'General', 'icon': 'home' },
+      { 'name': 'business', 'note': 'Business', 'icon': 'at' },
+      { 'name': 'entertainment', 'note': 'Entertainment', 'icon': 'apps' },
+      { 'name': 'health', 'note': 'Health', 'icon': 'medkit' },
+      { 'name': 'science', 'note': 'Science', 'icon': 'school' },
+      { 'name': 'sports', 'note': 'Sports', 'icon': 'football' },
+      { 'name': 'technology', 'note': 'Technology', 'icon': 'cloudy' },
     ];
   }
 

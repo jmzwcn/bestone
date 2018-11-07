@@ -109,7 +109,7 @@ var NewsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Headline News\n      <ion-badge color=\"success\">{{category}}</ion-badge>\n    </ion-title>\n    <ion-buttons slot=\"end\">\n      <ion-button (click)=\"presentPopover($event)\">\n        <ion-icon name=\"grid\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-slides pager=\"true\">\n    <ion-slide *ngFor=\"let article of data?.articles\" (click)=\"gotoNewsDetail(article)\">\n      <ion-card-content>\n        <ion-img [src]=\"article.urlToImage\"></ion-img>\n        <ion-card-title>{{article.title}}</ion-card-title>\n        <p>{{article.content}}</p>\n        <br/>\n      </ion-card-content>\n    </ion-slide>\n  </ion-slides>\n  <ion-fab vertical=\"bottom\" horizontal=\"end\">\n    <ion-fab-button (click)=\"presentAlertPrompt()\">\n      <ion-icon name=\"search\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Headline News\n      <ion-badge color=\"success\">{{category}}</ion-badge>\n    </ion-title>\n    <ion-buttons slot=\"end\">\n      <ion-button (click)=\"presentPopover($event)\">\n        <ion-icon name=\"grid\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-slides pager=\"true\">\n    <ion-slide *ngFor=\"let article of data?.articles\" (click)=\"gotoNewsDetail(article)\">\n      <ion-card-content>\n        <ion-img [src]=\"article.urlToImage\"></ion-img>\n        <ion-card-title>{{article.title}}</ion-card-title>\n        <p>{{article.content}}</p>\n        <br/>\n      </ion-card-content>\n    </ion-slide>\n  </ion-slides>\n  <ion-fab vertical=\"bottom\" horizontal=\"end\">\n    <ion-fab-button (click)=\"presentAlertPrompt()\">\n      <ion-icon name=\"search\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>"
 
 /***/ }),
 
@@ -120,7 +120,7 @@ module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".swiper-slide {\n  width: auto; }\n"
 
 /***/ }),
 
@@ -189,22 +189,39 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 var NewsPage = /** @class */ (function () {
-    function NewsPage(newsService, router, alertController, popoverController, ref) {
+    function NewsPage(newsService, router, alertController, popoverController, loadingController, ref) {
         this.newsService = newsService;
         this.router = router;
         this.alertController = alertController;
         this.popoverController = popoverController;
+        this.loadingController = loadingController;
         this.ref = ref;
         this.category = 'general';
         this.refresh();
     }
     NewsPage.prototype.refresh = function () {
-        var _this = this;
-        this.newsService
-            .getData('top-headlines?country=us&category=' + this.category)
-            .subscribe(function (data) {
-            _this.data = data;
-            _this.data.articles = _this.data.articles.filter(function (article) { return article.content; });
+        return __awaiter(this, void 0, void 0, function () {
+            var loading;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.loadingController.create({
+                            message: 'Please wait...',
+                            duration: 10000
+                        })];
+                    case 1:
+                        loading = _a.sent();
+                        loading.present();
+                        this.newsService
+                            .getData('top-headlines?country=us&category=' + this.category)
+                            .subscribe(function (data) {
+                            _this.data = data;
+                            _this.data.articles = _this.data.articles.filter(function (article) { return article.content; });
+                            loading.dismiss();
+                        });
+                        return [2 /*return*/];
+                }
+            });
         });
     };
     NewsPage.prototype.gotoNewsDetail = function (article) {
@@ -297,6 +314,7 @@ var NewsPage = /** @class */ (function () {
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AlertController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["PopoverController"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["LoadingController"],
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]])
     ], NewsPage);
     return NewsPage;

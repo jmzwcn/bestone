@@ -1945,7 +1945,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-list>\n  <!-- <ion-list-header>Category</ion-list-header> -->\n  <br/>\n  <ion-item *ngFor=\"let category of categories\" (click)=\"itemClick(category.name)\">\n    <ion-icon slot=\"start\" [name]=\"category.icon\"></ion-icon>\n    <ion-label>{{category.name}}</ion-label>\n  </ion-item>\n</ion-list>"
+module.exports = "<ion-list>\n  <ion-list-header>Category</ion-list-header>\n  <ion-item *ngFor=\"let category of categories\" (click)=\"itemClick(category.name)\">\n    <ion-icon slot=\"start\" [name]=\"category.icon\"></ion-icon>\n    <ion-label>{{category.note}}</ion-label>\n  </ion-item>\n</ion-list>"
 
 /***/ }),
 
@@ -1987,13 +1987,13 @@ var PopoverComponent = /** @class */ (function () {
     function PopoverComponent(popCtl) {
         this.popCtl = popCtl;
         this.categories = [
-            { 'name': 'general', 'value': 'general', 'icon': 'home' },
-            { 'name': 'business', 'value': 'business', 'icon': 'at' },
-            { 'name': 'entertainment', 'value': 'entertainment', 'icon': 'apps' },
-            { 'name': 'health', 'value': 'health', 'icon': 'medkit' },
-            { 'name': 'science', 'value': 'science', 'icon': 'school' },
-            { 'name': 'sports', 'value': 'sports', 'icon': 'football' },
-            { 'name': 'technology', 'value': 'technology', 'icon': 'cloudy' },
+            { 'name': 'general', 'note': 'General', 'icon': 'home' },
+            { 'name': 'business', 'note': 'Business', 'icon': 'at' },
+            { 'name': 'entertainment', 'note': 'Entertainment', 'icon': 'apps' },
+            { 'name': 'health', 'note': 'Health', 'icon': 'medkit' },
+            { 'name': 'science', 'note': 'Science', 'icon': 'school' },
+            { 'name': 'sports', 'note': 'Sports', 'icon': 'football' },
+            { 'name': 'technology', 'note': 'Technology', 'icon': 'cloudy' },
         ];
     }
     PopoverComponent.prototype.ngOnInit = function () {

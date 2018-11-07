@@ -12,9 +12,7 @@ export class HomePage {
   @ViewChild('map_container') map_container: ElementRef;
   map: any; // 地图对象
 
-  constructor(private geolocation: Geolocation) {
-    // this.map.center([116.2314939, 40.2071555]);
-  }
+  constructor(private geolocation: Geolocation) { }
 
   ionViewDidEnter() {
     this.map = new AMap.Map(this.map_container.nativeElement, {
@@ -25,10 +23,10 @@ export class HomePage {
         showBuildingBlock: true
       })
     });
-    // AMap.service('AMap.Geolocation', () => {
-    //   const geolocation = new AMap.Geolocation({});
-    //   this.map.addControl(geolocation);
-    // });
+    AMap.service('AMap.Geolocation', () => {
+      const geolocation = new AMap.Geolocation({});
+      this.map.addControl(geolocation);
+    });
   }
 
   getLocation() {

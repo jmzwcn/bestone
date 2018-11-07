@@ -1,7 +1,7 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { NewsService } from '../news.service';
-import { Router, Params } from '@angular/router';
-import { AlertController, PopoverController, NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { AlertController, PopoverController, LoadingController } from '@ionic/angular';
 
 import { PopoverComponent } from '../popover/popover.component';
 
@@ -18,16 +18,23 @@ export class NewsPage {
     private router: Router,
     private alertController: AlertController,
     private popoverController: PopoverController,
+    private loadingController: LoadingController,
     private ref: ChangeDetectorRef) {
     this.refresh();
   }
 
-  refresh() {
+  async refresh() {
+    const loading = await this.loadingController.create({
+      message: 'Please wait...',
+      duration: 10000
+    });
+    loading.present();
     this.newsService
       .getData('top-headlines?country=us&category=' + this.category)
       .subscribe(data => {
         this.data = data;
         this.data.articles = this.data.articles.filter(article => article.content);
+        loading.dismiss();
       });
   }
 

@@ -259,9 +259,9 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var HomePage = /** @class */ (function () {
     function HomePage(geolocation) {
         this.geolocation = geolocation;
-        // this.map.center([116.2314939, 40.2071555]);
     }
     HomePage.prototype.ionViewDidEnter = function () {
+        var _this = this;
         this.map = new AMap.Map(this.map_container.nativeElement, {
             view: new AMap.View2D({
                 zoom: 11,
@@ -270,10 +270,10 @@ var HomePage = /** @class */ (function () {
                 showBuildingBlock: true
             })
         });
-        // AMap.service('AMap.Geolocation', () => {
-        //   const geolocation = new AMap.Geolocation({});
-        //   this.map.addControl(geolocation);
-        // });
+        AMap.service('AMap.Geolocation', function () {
+            var geolocation = new AMap.Geolocation({});
+            _this.map.addControl(geolocation);
+        });
     };
     HomePage.prototype.getLocation = function () {
         var _this = this;
