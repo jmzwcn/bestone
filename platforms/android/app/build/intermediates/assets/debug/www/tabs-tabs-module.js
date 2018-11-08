@@ -56,7 +56,7 @@ var ContactPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on 微信</ion-list-header>\n    <ion-item>\n      <ion-button size=\"default\" (click)=\"getLocation()\">当前位置</ion-button>\n    </ion-item>   \n  </ion-list>\n  <ion-fab vertical=\"center\" horizontal=\"center\" slot=\"fixed\">\n      <ion-fab-button (click)=\"scanQR()\">\n          <ion-icon name=\"qr-scanner\"></ion-icon>\n      </ion-fab-button>\n  </ion-fab>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on 微信</ion-list-header>\n    <ion-item>Daniel Zhang</ion-item>\n    <ion-item>\n      <ion-button size=\"default\" (click)=\"getLocation()\">当前位置</ion-button>\n    </ion-item>\n  </ion-list>\n  <ion-fab vertical=\"center\" horizontal=\"center\" slot=\"fixed\">\n    <ion-fab-button (click)=\"scanQR()\">\n      <ion-icon name=\"qr-scanner\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>"
 
 /***/ }),
 
@@ -218,7 +218,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n      <ion-button (click)=\"getLocation()\">\n        <ion-icon name=\"eye\"></ion-icon>\n        定位</ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <div #map_container class=\"map_container\"></div>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n      <ion-button (click)=\"getLocation()\">\n        <ion-icon name=\"eye\"></ion-icon>\n        定位</ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <div #map_container class=\"map_container\"></div>\n</ion-content>"
 
 /***/ }),
 
@@ -477,7 +477,7 @@ var routes = [
         children: [
             {
                 path: '',
-                redirectTo: '/tabs/(home:home)',
+                redirectTo: '/tabs/(news:news)',
                 pathMatch: 'full',
             },
             {
@@ -499,7 +499,7 @@ var routes = [
     },
     {
         path: '',
-        redirectTo: '/tabs/(home:home)',
+        redirectTo: '/tabs/(news:news)',
         pathMatch: 'full'
     }
 ];

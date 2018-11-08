@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -15,7 +15,7 @@
 </ion-header>
 <ion-content>
   <ion-slides pager="true" class="swiper-slide">
-    <ion-slide *ngFor="let article of data?.articles" (click)="gotoNewsDetail(article)">
+    <ion-slide *ngFor="let article of data?.articles" (click)="gotoNewsDetail(article)" class="swiper-slide">
       <ion-card-content>
         <ion-img [src]="article.urlToImage"></ion-img>
         <ion-card-title>{{article.title}}</ion-card-title>
