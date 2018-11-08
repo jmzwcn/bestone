@@ -14,13 +14,12 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-slides pager="true" class="swiper-slide">
-    <ion-slide *ngFor="let article of data?.articles" (click)="gotoNewsDetail(article)" class="swiper-slide">
+  <ion-slides>
+    <ion-slide *ngFor="let article of data?.articles" (click)="gotoNewsDetail(article)">
       <ion-card-content>
         <ion-img [src]="article.urlToImage"></ion-img>
         <ion-card-title>{{article.title}}</ion-card-title>
         <p>{{article.content}}</p>
-        <br/>
       </ion-card-content>
     </ion-slide>
   </ion-slides>
