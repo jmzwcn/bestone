@@ -14,7 +14,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-slides pager="true">
+  <ion-slides pager="true" class="swiper-slide">
     <ion-slide *ngFor="let article of data?.articles" (click)="gotoNewsDetail(article)">
       <ion-card-content>
         <ion-img [src]="article.urlToImage"></ion-img>
