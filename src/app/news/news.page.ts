@@ -29,6 +29,7 @@ export class NewsPage {
       duration: 10000
     });
     loading.present();
+
     this.newsService
       .getData('top-headlines?country=us&category=' + this.category)
       .subscribe(data => {
@@ -92,7 +93,9 @@ export class NewsPage {
 
     await popover.present();
     const result = await popover.onDidDismiss();
-    this.category = result.data;
-    this.refresh();
+    if (result.data) {
+      this.category = result.data;
+      this.refresh();
+    }
   }
 }

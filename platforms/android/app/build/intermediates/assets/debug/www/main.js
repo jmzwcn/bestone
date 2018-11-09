@@ -1738,7 +1738,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu>\n      <ion-header>\n        <ion-toolbar>\n          <ion-title>Menu</ion-title>\n        </ion-toolbar>\n      </ion-header>\n      <ion-content>\n        <ion-list>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','general']\">\n              <ion-icon slot=\"start\" name=\"home\"></ion-icon>\n              <ion-label>General</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','business']\">\n              <ion-icon slot=\"start\" name=\"at\"></ion-icon>\n              <ion-label>Business</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','entertainment']\">\n              <ion-icon slot=\"start\" name=\"apps\"></ion-icon>\n              <ion-label>Entertainment</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','health']\">\n              <ion-icon slot=\"start\" name=\"medkit\"></ion-icon>\n              <ion-label>Health</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','science']\">\n              <ion-icon slot=\"start\" name=\"school\"></ion-icon>\n              <ion-label>Science</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','sports']\">\n              <ion-icon slot=\"start\" name=\"football\"></ion-icon>\n              <ion-label>Sports</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle>\n            <ion-item routerDirection=\"root\" [routerLink]=\"['/news','technology']\">\n              <ion-icon slot=\"start\" name=\"cloudy\"></ion-icon>\n              <ion-label>Technology</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>"
+module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu>\n      <ion-header>\n        <ion-toolbar>\n          <ion-title>Menu</ion-title>\n        </ion-toolbar>\n      </ion-header>\n      <ion-content>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>"
 
 /***/ }),
 
@@ -1945,7 +1945,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-list>\n  <ion-list-header>Category</ion-list-header>\n  <ion-item *ngFor=\"let category of categories\" (click)=\"itemClick(category.name)\">\n    <ion-icon slot=\"start\" [name]=\"category.icon\"></ion-icon>\n    <ion-label>{{category.note}}</ion-label>\n  </ion-item>\n</ion-list>"
+module.exports = "<ion-list>\n  <ion-label>Category</ion-label>\n  <ion-item *ngFor=\"let category of categories\" (click)=\"itemClick(category.name)\">\n    <ion-icon slot=\"start\" [name]=\"category.icon\"></ion-icon>\n    <ion-label text-capitalize>{{category.name}}</ion-label>\n  </ion-item>\n</ion-list>"
 
 /***/ }),
 
@@ -1956,7 +1956,7 @@ module.exports = "<ion-list>\n  <ion-list-header>Category</ion-list-header>\n  <
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".div-hander {\n  cursor: pointer; }\n"
 
 /***/ }),
 
@@ -1987,13 +1987,13 @@ var PopoverComponent = /** @class */ (function () {
     function PopoverComponent(popCtl) {
         this.popCtl = popCtl;
         this.categories = [
-            { 'name': 'general', 'note': 'General', 'icon': 'home' },
-            { 'name': 'business', 'note': 'Business', 'icon': 'at' },
-            { 'name': 'entertainment', 'note': 'Entertainment', 'icon': 'apps' },
-            { 'name': 'health', 'note': 'Health', 'icon': 'medkit' },
-            { 'name': 'science', 'note': 'Science', 'icon': 'school' },
-            { 'name': 'sports', 'note': 'Sports', 'icon': 'football' },
-            { 'name': 'technology', 'note': 'Technology', 'icon': 'cloudy' },
+            { 'name': 'general', 'icon': 'home' },
+            { 'name': 'business', 'icon': 'at' },
+            { 'name': 'entertainment', 'icon': 'apps' },
+            { 'name': 'health', 'icon': 'medkit' },
+            { 'name': 'science', 'icon': 'school' },
+            { 'name': 'sports', 'icon': 'football' },
+            { 'name': 'technology', 'icon': 'cloudy' },
         ];
     }
     PopoverComponent.prototype.ngOnInit = function () {

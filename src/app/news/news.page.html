@@ -16,7 +16,7 @@
 <ion-content>
   <ion-slides>
     <ion-slide *ngFor="let article of data?.articles" (click)="gotoNewsDetail(article)">
-      <ion-card-content>
+      <ion-card-content no-padding>
         <ion-img [src]="article.urlToImage"></ion-img>
         <ion-card-title>{{article.title}}</ion-card-title>
         <p>{{article.content}}</p>

@@ -392,7 +392,7 @@ var TabsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-tabs>\n  <ion-tab label=\"News\" icon=\"information-circle\" href=\"/tabs/(news:news)\">\n    <ion-router-outlet name=\"news\"></ion-router-outlet>\n  </ion-tab>\n  <ion-tab label=\"Navigation\" icon=\"home\" href=\"/tabs/(home:home)\">\n    <ion-router-outlet name=\"home\"></ion-router-outlet>\n  </ion-tab>\n  <ion-tab label=\"Contact\" icon=\"contacts\" href=\"/tabs/(contact:contact)\">\n    <ion-router-outlet name=\"contact\"></ion-router-outlet>\n  </ion-tab>\n</ion-tabs>"
+module.exports = "<ion-tabs>\n  <ion-tab label=\"News\" icon=\"information-circle\" href=\"/tabs/(news:news)\">\n    <ion-router-outlet name=\"news\"></ion-router-outlet>\n  </ion-tab>\n  <ion-tab label=\"Navigation\" icon=\"navigate\" href=\"/tabs/(home:home)\">\n    <ion-router-outlet name=\"home\"></ion-router-outlet>\n  </ion-tab>\n  <ion-tab label=\"Contact\" icon=\"contacts\" href=\"/tabs/(contact:contact)\">\n    <ion-router-outlet name=\"contact\"></ion-router-outlet>\n  </ion-tab>\n</ion-tabs>"
 
 /***/ }),
 
