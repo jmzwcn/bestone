@@ -1,5 +1,5 @@
 <ion-list>
-  <ion-label>Category</ion-label>
+  <ion-list-header>Category</ion-list-header>
   <ion-item *ngFor="let category of categories" (click)="itemClick(category.name)">
     <ion-icon slot="start" [name]="category.icon"></ion-icon>
     <ion-label text-capitalize>{{category.name}}</ion-label>

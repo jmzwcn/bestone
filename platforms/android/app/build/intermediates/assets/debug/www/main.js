@@ -1945,7 +1945,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-list>\n  <ion-label>Category</ion-label>\n  <ion-item *ngFor=\"let category of categories\" (click)=\"itemClick(category.name)\">\n    <ion-icon slot=\"start\" [name]=\"category.icon\"></ion-icon>\n    <ion-label text-capitalize>{{category.name}}</ion-label>\n  </ion-item>\n</ion-list>"
+module.exports = "<ion-list>\n  <ion-list-header>Category</ion-list-header>\n  <ion-item *ngFor=\"let category of categories\" (click)=\"itemClick(category.name)\">\n    <ion-icon slot=\"start\" [name]=\"category.icon\"></ion-icon>\n    <ion-label text-capitalize>{{category.name}}</ion-label>\n  </ion-item>\n</ion-list>"
 
 /***/ }),
 

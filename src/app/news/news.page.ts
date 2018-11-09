@@ -13,6 +13,11 @@ import { PopoverComponent } from '../popover/popover.component';
 export class NewsPage {
   data: any;
   category = 'general';
+  sliderConfig = {
+    loop: true,
+    effect: 'flip'
+  };
+
   constructor(
     private newsService: NewsService,
     private router: Router,

@@ -109,7 +109,7 @@ var NewsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Headline News\n      <ion-badge color=\"success\">{{category}}</ion-badge>\n    </ion-title>\n    <ion-buttons slot=\"end\">\n      <ion-button (click)=\"presentPopover($event)\">\n        <ion-icon name=\"grid\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-slides>\n    <ion-slide *ngFor=\"let article of data?.articles\" (click)=\"gotoNewsDetail(article)\">\n      <ion-card-content no-padding>\n        <ion-img [src]=\"article.urlToImage\"></ion-img>\n        <ion-card-title>{{article.title}}</ion-card-title>\n        <p>{{article.content}}</p>\n      </ion-card-content>\n    </ion-slide>\n  </ion-slides>\n  <ion-fab vertical=\"bottom\" horizontal=\"end\">\n    <ion-fab-button (click)=\"presentAlertPrompt()\">\n      <ion-icon name=\"search\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Headline News\n      <ion-badge color=\"success\">{{category}}</ion-badge>\n    </ion-title>\n    <ion-buttons slot=\"end\">\n      <ion-button (click)=\"presentPopover($event)\">\n        <ion-icon name=\"grid\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-slides [options]=\"sliderConfig\">\n    <ion-slide *ngFor=\"let article of data?.articles\" (click)=\"gotoNewsDetail(article)\">\n      <ion-card-content>\n        <ion-img [src]=\"article.urlToImage\"></ion-img>\n        <ion-card-title>{{article.title}}</ion-card-title>\n        <p>{{article.content}}</p>\n      </ion-card-content>\n    </ion-slide>\n  </ion-slides>\n  <ion-fab vertical=\"bottom\" horizontal=\"end\">\n    <ion-fab-button (click)=\"presentAlertPrompt()\">\n      <ion-icon name=\"search\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>"
 
 /***/ }),
 
@@ -197,6 +197,10 @@ var NewsPage = /** @class */ (function () {
         this.loadingController = loadingController;
         this.ref = ref;
         this.category = 'general';
+        this.sliderConfig = {
+            loop: true,
+            effect: 'flip'
+        };
         this.refresh();
     }
     NewsPage.prototype.refresh = function () {
