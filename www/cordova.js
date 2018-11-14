@@ -19,7 +19,7 @@
  under the License.
 */
 ;(function() {
-var PLATFORM_VERSION_BUILD_LABEL = '7.1.1';
+var PLATFORM_VERSION_BUILD_LABEL = '7.1.2';
 // file: src/scripts/require.js
 
 /* jshint -W079 */
@@ -2187,5 +2187,6 @@ window.cordova = require('cordova');
 require('cordova/init');
 
 })();
+
 ;
 //# sourceMappingURL=cordova.js.map

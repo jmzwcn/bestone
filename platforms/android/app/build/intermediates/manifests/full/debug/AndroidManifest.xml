@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.ionic.starter"
+    package="io.bestone.starter"
     android:hardwareAccelerated="true"
     android:versionCode="1"
     android:versionName="0.0.1" >
@@ -37,7 +37,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true" >
         <activity
-            android:name="io.ionic.starter.MainActivity"
+            android:name="io.bestone.starter.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
             android:label="@string/activity_name"
             android:launchMode="singleTop"

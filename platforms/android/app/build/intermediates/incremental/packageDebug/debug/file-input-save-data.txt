@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Nov 07 23:38:30 CST 2018
+#Wed Nov 14 23:23:01 CST 2018
 1034.base=/home/jmzwcn/work/src/github.com/bestone/platforms/android/app/build/intermediates/assets/debug
 881.path=www/svg/md-person-add.svg
 508.set=ASSET

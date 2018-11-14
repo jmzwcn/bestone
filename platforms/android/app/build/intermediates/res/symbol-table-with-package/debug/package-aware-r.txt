@@ -1,4 +1,4 @@
-io.ionic.starter
+io.bestone.starter
 int array country_codes 0x7f010000
 int array preferences_front_light_options 0x7f010001
 int array preferences_front_light_values 0x7f010002

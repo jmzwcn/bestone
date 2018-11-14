@@ -20,7 +20,7 @@ INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src
 INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
 INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
 	package
-		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:98-124
+		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:98-126
 		INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -30,7 +30,7 @@ INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src
 	android:hardwareAccelerated
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:11-45
 	xmlns:android
-		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:125-183
+		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:127-185
 	android:versionCode
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:2:46-69
 		INJECTED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml
@@ -65,7 +65,7 @@ MERGED from [:barcodescanner-release-2.1.5:] /home/jmzwcn/.gradle/caches/transfo
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:5:18-52
 	android:icon
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:5:53-80
-activity#io.ionic.starter.MainActivity
+activity#io.bestone.starter.MainActivity
 ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:6:9-11:20
 	android:label
 		ADDED from /home/jmzwcn/work/src/github.com/bestone/platforms/android/app/src/main/AndroidManifest.xml:6:97-134
