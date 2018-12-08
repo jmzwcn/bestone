@@ -56,7 +56,7 @@ var ContactPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on 微信</ion-list-header>\n    <ion-item>Daniel Zhang</ion-item>\n    <ion-item>\n      <ion-button size=\"default\" (click)=\"getLocation()\">当前位置</ion-button>\n    </ion-item>\n  </ion-list>\n  <ion-fab vertical=\"center\" horizontal=\"center\" slot=\"fixed\">\n    <ion-fab-button (click)=\"scanQR()\">\n      <ion-icon name=\"qr-scanner\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on 微信</ion-list-header>\n    <ion-item>Daniel Zhang</ion-item>\n    <ion-item>\n      <ion-button size=\"default\" (click)=\"getLocation()\">当前位置</ion-button>\n    </ion-item>\n  </ion-list>\n  <ion-fab vertical=\"center\" horizontal=\"center\" slot=\"fixed\">\n    <ion-fab-button (click)=\"scanQR()\">\n      <ion-icon name=\"qr-scanner\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>"
 
 /***/ }),
 
